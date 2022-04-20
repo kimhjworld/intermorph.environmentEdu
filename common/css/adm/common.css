@@ -475,6 +475,13 @@ th .sorter.desc .arrow {background-position:0 -32px;}
 .dash .my_prog .work.active .img {background-image:url("../../images/www/icon/step_work_on.png");}
 .dash .my_prog .re.active .img {background-image:url("../../images/www/icon/step_re_on.png");}
 .dash .tbl .ad_btn{position: absolute; top:12px; right:20px}
+.dash .my_prog3 .lab{background: none;color: #000;font-weight: bold;margin-bottom: 30px;}
+.dash .my_prog3 .img{border-radius: 50%;height: 100px;width: 100px;}
+.dash .my_prog3 .group:before{display: none;}
+
+.dash .my_prog4 .lab{background: none;color: #000;font-weight: bold;margin-bottom: 10px;min-height: 70px;}
+.dash .my_prog4 .img{border-radius: 50%;height: 100px;width: 100px;background: #bee8c7;}
+.dash .my_prog4 .group:before{display: none;}
 
 @media (min-width: 769px) {
     .row {
