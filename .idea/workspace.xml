@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7654ad0e-de33-412d-af1f-20d9b8a8769b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/common/html/adm/00_dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/html/adm/02_description_crs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/html/adm/02_description_mng.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/css/adm/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/adm/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/css/www/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/www/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/html/adm/00_subpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/html/adm/00_subpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/html/www/03_edu_01_app_01_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/html/www/03_edu_01_app_01_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/html/www/06_mypage_02_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/html/www/06_mypage_02_manage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/html/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/html/www/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="283BlHIRtWtMSrbVT0pkahM3ENT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/html/adm" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/common/html/adm" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7654ad0e-de33-412d-af1f-20d9b8a8769b" name="Default Changelist" comment="" />
+      <created>1650435537397</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650435537397</updated>
+      <workItem from="1650435538487" duration="5921000" />
+      <workItem from="1650442012188" duration="3431000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1650445002801">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/1680.0.1680.1050/0.0.1680.1050@0.0.1680.1050" timestamp="1650445002801" />
+    <state x="539" y="264" width="602" height="580" key="find.popup" timestamp="1650444439288">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="539" y="264" width="602" height="580" key="find.popup/1680.0.1680.1050/0.0.1680.1050@0.0.1680.1050" timestamp="1650444439288" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1650443674478">
+      <screen x="0" y="0" width="1680" height="975" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1680.1050/0.0.1680.1050@0.0.1680.1050" timestamp="1650437706511" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.23.1680.1027/0.0.1680.975@0.0.1680.975" timestamp="1650443674478" />
+  </component>
+</project>

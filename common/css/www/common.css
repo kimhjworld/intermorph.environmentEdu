@@ -1182,6 +1182,11 @@ td .no_info {text-align:center;}
 .m_email .desc .date {font-size:14px;font-weight:400;color:#0663c3;}
 .m_email .at_title {margin-bottom:0;color:var(--ColorBlue);}
 
+/*search_area*/
+.search_area{display: inline-block;position: relative;}
+.search_area input[type="text"]{padding-right: 30px;width: 250px;}
+.search_area .del{vertical-align: middle;display: inline-block;width: 20px;height: 20px;margin-left: 5px;background: url(../../images/adm/icon/k_icon_del.png) no-repeat 50% 50%;position: absolute;right: 10px;top: 50%;margin-top: -10px;}
+
 
 
 /* certificate */

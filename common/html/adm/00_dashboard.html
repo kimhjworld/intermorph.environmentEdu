@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가 관리자</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/CoreUI-Icons.min.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../../lib/jquery.mCustomScrollbar.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="../../../lib/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- jquery ui -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<!-- //jquery ui -->
+<link rel="stylesheet" href="../../css/adm/common.css">
+<script src="../../js/adm/design.js"></script>
+<script>
+jQuery(function($){
+	$("[data-role='datepicker']" ).datepicker({
+		showOn:"both",
+		buttonText: '',
+		dateFormat: 'yy-mm-dd',
+		changeYear: true,
+		yearRange: "1900:+nn"
+	});
+	
+	//jquery dialog
+	$("#dialog").dialog({
+		modal: true,
+		buttons: [
+			{
+				//버튼텍스트
+				text: "확인",
+				//클릭이벤트
+				click: function() {
+				$(this).dialog("close");
+				}
+			},
+			{
+				//버튼텍스트
+				text: "취소",
+				//클릭이벤트
+				click: function(){
+				$(this).dialog("close");
+				}
+			}
+		],
+		open: function(event, ui) {
+			$(this).closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
+		}
+	});
+});
+</script>
+</head>
+<body>
+<div class="adm">
+	<!-- header -->
+	<div id="header">
+		<h1 class="logo">
+			<a href="#"><img src="../../images/www/common/logo_wt.png" alt="환경교육사 자격평가"></a>
+		</h1>
+		<div class="global">
+			<div class="info">
+				시스템관리자 [2020.02.12 13:11]​
+			</div>
+			<div class="menu">
+				<a href="#" class="ad_btn gray">정보수정</a>
+				<a href="#" class="ad_btn blue">로그아웃</a>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- side -->
+	<div class="side_nav">
+		<div class="scroll">
+			<ul class="nav">
+				<li>
+					<a href="#"><i class="cil-group"></i>회원</a>
+					<ul>
+						<li>
+							<a href="#">이력관리</a>
+						</li>
+						<li>
+							<a href="#">관리자</a>
+							<ul>
+								<li>
+									<a href="#">메뉴</a>
+								</li>
+								<li>
+									<a href="#" class="active">현재 활성화된 메뉴</a><!-- 현재 페이지 활성화 클래스 active -->
+								</li>
+								<li>
+									<a href="#">메뉴</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">기관관리자</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><i class="cil-education"></i>과정</a>
+					<ul>
+						<li>
+							<a href="#">2뎁스</a>
+							<ul>
+								<li><a href="#">3뎁스</a></li>
+								<li><a href="#">3뎁스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">2뎁스</a>
+						</li>
+						<li>
+							<a href="#">2뎁스</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><i class="cil-book"></i>교육신청</a>
+				</li>
+				<li>
+					<a href="#"><i class="cil-tags"></i>교육관리</a>
+				</li>
+				<li>
+					<a href="#"><i class="cil-pen-nib"></i>필기시험</a>
+				</li>
+				<li>
+					<a href="#"><i class="cil-list"></i>게시판</a>
+				</li>
+				<li>
+					<a href="#"><i class="cil-browser"></i>사이트</a>
+				</li>
+				<li>
+					<a href="#"><i class="cil-settings"></i>시스템권한</a>
+				</li>
+				<li>
+					<a href="#"><i class="cil-chart-pie"></i>로그관리</a>
+				</li>
+			</ul>
+		</div>
+		<div class="foot">
+			COPYRIGHT ​
+			<br>MINISTRY OF
+			<br>ENVIRONMENT.​
+			<br>ALL RIGHTS RESERVED.​
+		</div>
+	</div>
+	<!-- //side -->
+	<div id="container">
+		<div class="foreword">
+			<h2>대시보드</h2>
+			<div class="path">
+				<span>DashBoard</span>
+			</div>
+		</div>
+		<div id="content">
+			<!-- 콘텐츠 -->
+			<div class="dash">
+				<div class="row my_state">
+					<div class="col-mds-12">
+						<p class="ct_title">2022년 00월 00일 기준  자격취득현황</p>
+					</div>
+					<div class="col-mds-6 ">
+						<div class="tbl">
+							<p class="title">교육신청</p>
+							<div class="data cols">
+								<div class="col-mds-6">
+									<div class="top">
+										<h5>수강신청 중 과정</h5>
+									</div>
+									<div class="cell">
+										<span class="count">0개</span>
+										<span class="text">과정</span>
+									</div>
+								</div>
+								<div class="col-mds-2"></div>
+								<div class="col-mds-4">
+									<div class="img icon icon-edu"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-mds-6 before"><!-- 20220410 : div 그룹 클래스 수정3 -->
+						<div class="tbl">
+							<p class="title">팔기시험</p>
+							<div class="data cols">
+								<div class="col-mds-6">
+									<div class="top">
+										<h5>접수 중 필기시험</h5>
+									</div>
+									<div class="cell">
+										<span class="count">0건</span>
+									</div>
+								</div>
+								<div class="col-mds-2"></div>
+								<div class="col-mds-4">
+									<div class="img icon icon-exam"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row my_state">
+					<div class="col-mds-12">
+						<p class="ct_title">2022년 기준  자격취득상세현황</p>
+					</div>
+					<div class="col-mds-6 ">
+						<div class="tbl">
+							<p class="title">교육신청</p>
+							<a href="#" class="ad_btn green">운영과정 바로가기</a>
+							<div class="row g-0 s_step my_prog my_prog1">
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">심사전</p>
+									<div class="img">0개</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">랜덤선정</p>
+									<div class="img">0개</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">선정완료</p>
+									<div class="img ">0개</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">결과통보</p>
+									<div class="img">0개</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">교육완료</p>
+									<div class="img">0개</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-mds-6 before">
+						<div class="tbl">
+							<p class="title">필기시험</p>
+							<a href="#" class="ad_btn green">운영과정 바로가기</a>
+							<div class="row g-0 s_step my_prog my_prog2">
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">심사전</p>
+									<div class="img">0개</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">선정완료</p>
+									<div class="img">0개</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">입금완료</p>
+									<div class="img ">0개</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">결과통보</p>
+									<div class="img">0개</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">시험완료</p>
+									<div class="img">0개</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row my_state">
+					<div class="col-mds-8 ">
+						<p class="ct_title">2022년도 보수교육 현황</p>
+						<div class="tbl">
+							<p class="title">교육신청</p>
+							<div class="row g-0 s_step my_prog my_prog3">
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">보수교육 대상인원</p>
+									<div class="img">총100명</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">보수교육 완료인원</p>
+									<div class="img">총10명</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">1차완료</p>
+									<div class="img">총10명</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">2차완료</p>
+									<div class="img">총10명</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">3차완료</p>
+									<div class="img">총10명</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-mds-4 before">
+						<p class="ct_title">2022년도 자격정지 현황</p>
+						<div class="tbl">
+							<p class="title">정지인원</p>
+							<div class="row g-0 s_step my_prog my_prog4">
+								<div class="col-md-auto col-sm-6 group g-0">
+									<p class="lab">정지인원</p>
+									<div class="img">총100명</div>
+								</div>
+								<div class="col-md-auto col-sm-6 group g-0 write">
+									<p class="lab">정지예정인원<br/>[정지만료1달전]</p>
+									<div class="img">총100명</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
