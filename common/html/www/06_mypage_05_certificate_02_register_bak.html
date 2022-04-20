@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	//jquery ui datepicker
+	$("[data-role='datepicker']" ).datepicker({
+		showOn:"both",
+		buttonText: '',
+		dateFormat: 'yy-mm-dd',
+		changeYear: true,
+		yearRange: "1900:+nn"
+	});
+});
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div class="foreword ord_6">
+		<h2><span>자격증 발급·재발급</span></h2>
+		<div class="path">
+			<div class="rows">
+				<div class="home"><span class="sr_only">홈</span></div>
+				<div><span>마이페이지</span></div>
+				<div><span>자격증 발급·재발급</span></div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<!-- 콘텐츠 -->
+		<h3 class="ct_title">자격증 발급·재발급 신청</h3>
+		<div class="ct_box bot">
+			<p class="p_noti"><span class="c_red"><i class="m_icon_out circle_notifications"></i>[안내]</span></p>
+			<ul class="radio">
+				<li>법 개정(22년 1월 6일) 이전 자격증은 재발급으로 신청하세요.</li>
+				<li>자격이 정지 혹은 취소된 경우에는 자격증 발급 및 출력이 제한됩니다.</li>
+			</ul>
+		</div>
+		<table class="tbl_row al">
+			<colgroup>
+				<col style="width:17%;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">발급 구분</th>
+					<td>
+						<input type="radio" id="a_1_01" name="a_1">
+						<label for="a_1_01">발급</label>
+						<input type="radio" id="a_1_02" name="a_1">
+						<label for="a_1_02">재발급</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">자격취득 교육과정<br>(발급인 경우)</th>
+					<td>
+						<select name="" id="">
+							<option value="">선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">자격증 번호<br>(재발급인 경우)</th>
+					<td>
+						<input type="text" title="자격증 번호">
+						<a href="#" class="c_btn bk">자격증 확인</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이름</th>
+					<td>OOO</td>
+				</tr>
+				<tr>
+					<th scope="row">이수 양상기관명</th>
+					<td>
+						<select name="" id="">
+							<option value="">선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">등급</th>
+					<td>
+						<input type="radio" id="a_2_01" name="a_2">
+						<label for="a_2_01">3급</label>
+						<input type="radio" id="a_2_02" name="a_2">
+						<label for="a_2_02">2급</label>
+						<input type="radio" id="a_2_03" name="a_2">
+						<label for="a_2_03">1급</label>
+					</td>
+				</tr>
+				
+				<tr>
+					<th scope="row">주민등록 번호</th>
+					<td>
+						<input type="password" class="mo_wide" title="주민등록 번호" readonly value="*************">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">핸드폰번호</th>
+					<td>
+						<input type="text" class="mo_wide" placeholder="- 없이 숫자만 입력" title="핸드폰번호">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">주소</th>
+					<td>
+						<input type="text" class="wd_sm" title="우편번호" readonly>
+						<a href="#" class="c_btn bk">우편번호 찾기</a>
+						<input type="text" class="wide mts" title="주소">
+						<input type="text" class="wide mts" title="상세 주소">
+					</td>
+				</tr>
+				
+				<tr>
+					<th scope="row">이수 기간</th>
+					<td>
+						<div class="c_date">
+							<input type="text" title="시작일" data-role="datepicker">
+						</div>
+						~
+						<div class="c_date">
+							<input type="text" title="종료일" data-role="datepicker">
+						</div>
+					</td>
+				</tr>
+				
+				<tr>
+					<th scope="row">발급 사유</th>
+					<td>
+						<select name="" id="" title="발급 사유">
+							<option value="">선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">발급 사유 비고</th>
+					<td>
+						<textarea name="" id="" cols="" rows="" title="발급 사유 비고"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">증빙 첨부 (발급인 경우)</th>
+					<td>
+						<p class="tb_note md m_0">1. 자격요건을 갖추었음을 증명하는 서류</p>
+						<input type="file">
+						<p class="tb_note md">2. 가족관계 기본 증명서</p>
+						<input type="file">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">증빙 첨부 (재발급인 경우)</th>
+					<td>
+						<p class="tb_note md m_0">1. 가족관계 기본 증명서</p>
+						<input type="file">
+						<p class="tb_note md">2.환경교육사 자격증</p>
+						<input type="file">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">상태</th>
+					<td>미승인</td>
+				</tr>
+				<tr>
+					<th scope="row">비고</th>
+					<td>1번 첨부파일 잘못됨</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="b_box">
+			<a href="#" class="c_btn green mid">저장</a>
+			<a href="#" class="c_btn gray mid">목록</a>
+		</div>
+		<!-- //콘텐츠 -->
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

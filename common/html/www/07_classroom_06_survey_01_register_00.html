@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가</title>
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- jquery ui -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<!-- //jquery ui -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	$('.x .c_btn').click(function(e){
+		e.preventDefault();
+		window.close();
+	});
+	$('.quiz_li li').click(function(e){
+		e.preventDefault();
+		var ex = $(this).parent('ul');
+		ex.find('li').removeClass('on');
+		$(this).addClass('on');
+	});
+});
+</script>
+</head>
+<body class="p_frm">
+<!-- 프레임 -->
+<div class="page_frame state"><!-- 20220125: 진행바 있을때 클래스 state -->
+	<div class="frm_top">
+		<div class="inner">
+			<div class="head">
+				<p class="title">설문</p>
+			</div>
+			<div class="menu">
+				<!-- <ul>
+					<li>
+						<a href="#" class="c_btn gray sm">메뉴</a>
+					</li>
+					<li>
+						<a href="#" class="c_btn d_blue sm">메뉴</a>
+					</li>
+					<li>
+						<a href="#" class="c_btn bk sm">저장</a>
+					</li>
+				</ul> -->
+				<a href="#" title="닫기" class="x" onclick="window.close()">
+					<i class="icc close"><span class="sr_only">닫기</span></i>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="fwd">
+		<div class="info">
+			<div class="name">
+				<span>설문자</span>
+				<span>홍길동</span>
+			</div>
+			<div class="date">
+				<span>설문일</span>
+				<span>2020.07.01</span>
+			</div>
+		</div>
+		<!-- 20220125: 진행상태 -->
+		<div class="prog">
+			<div class="bar">
+				<span class="mark" style="width:20%;"></span>
+			</div>
+		</div>
+		<!-- //20220125: 진행상태 -->
+	</div>
+	<div class="frm_ct">
+		<!-- 콘텐츠 -->
+		<div class="quiz_frame">
+			<!-- 20211112 : 설문시작 -->
+			<div class="quiz_fwd">
+				<p>
+					안녕하십니까?
+					<br>한국의료기기 안전정보원은 고객 여러분에게 더 나은 교육 서비스를 제공하고자, 교육이 종료된 후 해당 과정에 대한 만족도 조사를 시행하고 있습니다. 응답하신 결과는 ..
+					<br>감사합니다.
+				</p>
+			</div>
+			<!-- //20211112 : 설문시작 -->
+			<div class="b_box">
+				<a href="#" class="c_btn gray md">취소</a>
+				<a href="07_classroom_06_survey_01_register_01.html" class="c_btn bk md">다음</a>
+			</div>
+		</div>
+		<!-- //콘텐츠 -->
+	</div>
+</div>
+<!-- //프레임 -->
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가 관리자</title>
+<link rel="stylesheet" href="../../font/CoreUI-Icons.min.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../../lib/jquery.mCustomScrollbar.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="../../../lib/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- jquery ui -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<!-- //jquery ui -->
+<script src="../../js/adm/design.js"></script>
+<link rel="stylesheet" href="../../css/adm/common.css">
+<script>
+jQuery(function($){
+	$("[data-role='datepicker']" ).datepicker({
+		showOn:"both",
+		buttonText: '',
+		dateFormat: 'yy-mm-dd',
+		changeYear: true,
+		yearRange: "1900:+nn"
+	});
+});
+</script>
+</head>
+<body>
+<div class="adm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- side -->
+	<div class="side_nav">
+		<?php
+		include "inc/side_nav.html";
+		?>
+	</div>
+	<!-- //side -->
+	<div id="container">
+		<div class="foreword">
+			<h2>관리자 목록</h2>
+			<div class="path">
+				<span>홈</span>
+				<span>회원</span>
+				<span>관리자</span>
+				<span>메뉴</span>
+			</div>
+		</div>
+		<div id="content">
+			<!-- 콘텐츠 -->
+			<div class="sch_box">
+				<div class="group">
+					<div class="ip_gp">
+						<span class="lab">기간</span>
+						<div class="ad_datepicker">
+							<input type="text" placeholder="시작일" data-role="datepicker">
+						</div>
+						~
+						<div class="ad_datepicker">
+							<input type="text" placeholder="종료일" data-role="datepicker">
+						</div>
+					</div>
+					<div class="ip_gp">
+						<button type="button" class="ad_btn gray">당일</button>
+						<button type="button" class="ad_btn white">3일</button>
+						<button type="button" class="ad_btn white">7일</button>
+					</div>
+				</div>
+				<div class="group">
+					<select name="" id="">
+						<option value="">양성기관</option>
+					</select>
+					<select name="" id="">
+						<option value="">년도</option>
+					</select>
+					<select name="" id="">
+						<option value="">과정명</option>
+					</select>
+					<select name="" id="">
+						<option value="">차수</option>
+					</select>
+				</div>
+				<div class="group">
+					<span class="lab">조건</span>
+					<select name="" id="">
+						<option value="">선택</option>
+					</select>
+					<input type="text" style="width:300px;">
+					<button type="button" class="ad_btn gray">조회</button>
+				</div>
+			</div>
+			<div class="cb_bar">
+				<div>
+					<a href="#" class="ad_btn bk">신규등록</a>
+					<a href="#" class="ad_btn bk">삭제</a>
+				</div>
+				<div>
+					<a href="#" class="ad_btn green">EXCEL</a>
+					<span class="lab ml">목록개수</span>
+					<select name="" id="">
+						<option value="">10개</option>
+					</select>
+				</div>
+			</div>
+			<table class="tbl_col">
+				<colgroup>
+					<col style="width:50px;">
+					<col style="width:60px;">
+					<col style="width:110px;">
+					<col>
+					<col style="width:70px;">
+					<col>
+					<col style="width:70px;">
+					<col style="width:80px;">
+					<col style="width:120px;">
+					<col style="width:70px;">
+					<col style="width:70px;">
+					<col style="width:70px;">
+					<col style="width:70px;">
+					<col style="width:100px;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col"><input type="checkbox" title="전체선택"></th>
+						<th scope="col">No</th>
+						<th scope="col">운영과정 아이디</th>
+						<th scope="col">양성기관</th>
+						<th scope="col">년도</th>
+						<th scope="col"><a href="#" class="sorter desc">과정명<i class="arrow"></i></a></th>
+						<!-- sorter 클래스 desc, asc, 없음 -->
+						<th scope="col">차수</th>
+						<th scope="col">진행상태</th>
+						<th scope="col">교육신청기간</th>
+						<th scope="col">정원</th>
+						<th scope="col">수강자</th>
+						<th scope="col">수료자</th>
+						<th scope="col">상태</th>
+						<th scope="col"><a href="#" class="sorter desc">등록일<i class="arrow"></i></a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox" title="선택"></td>
+						<td>1234</td>
+						<td>seq</td>
+						<td>인천광역시 미추홀구 인천업사이클에코센터</td>
+						<td>2022</td>
+						<td><a href="#">3급 기본과정</a></td>
+						<td>1</td>
+						<td><span class="ad_badge gray">선정전</span></td>
+						<td>2022-02-21 ~<br>2022-02-21</td>
+						<td>300</td>
+						<td>29</td>
+						<td>28</td>
+						<td>운영</td>
+						<td>2022-02-01</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택"></td>
+						<td>2</td>
+						<td>seq</td>
+						<td></td>
+						<td></td>
+						<td><a href="#">3급 기본과정</a></td>
+						<td></td>
+						<td><span class="ad_badge purple">랜덤선정</span></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택"></td>
+						<td>3</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><span class="ad_badge sky">선정완료</span></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="paginate info">
+				<div class="count">
+					<span>전체 120개</span>
+					<span>현재 <span class="current">1</span>/200</span>
+				</div>
+				<div class="inner">
+					<a href="#" class="img start"><span class="sr_only">처음</span></a>
+					<a href="#" class="img prev"><span class="sr_only">이전</span></a>
+					<span class="on">1</span>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#" class="img next"><span class="sr_only">다음</span></a>
+					<a href="#" class="img end"><span class="sr_only">마지막</span></a>
+				</div>
+			</div>
+			<!-- //콘텐츠 -->
+		</div>
+	</div>
+</div>
+</body>
+</html>

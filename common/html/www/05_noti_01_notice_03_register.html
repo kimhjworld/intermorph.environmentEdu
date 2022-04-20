@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+});
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div class="foreword ord_5">
+		<h2><span>알림마당</span></h2>
+		<div class="path">
+			<div class="rows">
+				<div class="home"><span class="sr_only">홈</span></div>
+				<div><span>알림마당</span></div>
+				<div><span>공지사항</span></div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<!-- 콘텐츠 -->
+		<h3 class="ct_title">공지사항</h3>
+		<table class="tbl_row">
+			<colgroup>
+				<col style="width:20%;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">제목</th>
+					<td>
+						<input type="text" class="wide" title="제목">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">양성기관</th>
+					<td>
+						<select name="" id="">
+							<option value="">OOOO</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">작성자</th>
+					<td>홍길동</td>
+				</tr>
+				<tr>
+					<th scope="row">작성일</th>
+					<td>2022-01-17</td>
+				</tr>
+				<tr>
+					<th scope="row">내용</th>
+					<td>
+						<textarea name="" id="" cols="" rows="" title="내용"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">파일 첨부</th>
+					<td>
+						<input id="file_01" type="file">
+						<ul class="tb_note">
+							<li>*최대 10M까지 첨부하실 수 있습니다.</li>
+							<li>*.jpg .gif .png .jpeg .bmp .hwp .xls .xlsx .pdf 만 첨부 가능합니다.</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="b_box">
+			<a href="#" class="c_btn d_green mid">확인</a>
+			<a href="#" class="c_btn wt mid">취소</a>
+		</div>
+		<!-- //콘텐츠 -->
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	<!-- <a href="#" class="btn_top" title="TOP"><i class=""></i></a> -->
+</div>
+</body>
+</html>

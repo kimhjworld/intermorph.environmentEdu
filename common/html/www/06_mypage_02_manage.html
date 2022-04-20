@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	//팝업
+	$('a[href="#find_org"], a[href="#add_cert"], a[href="#add_subject"], a[href="#major_subject"], a[href="#work_career"], a[href="#add_edu"], a[href="#add_career"]').on('click', function(e){
+		e.preventDefault();
+		var target = $($(this).attr('href'));
+		if(target.is(':hidden')){
+			target.fadeIn();
+		} else {
+			target.fadeOut();
+		};
+		target.attr("tabindex","0");
+		$(this).attr('data-focus','on');
+		target.focus();
+	});
+
+	//jquery ui datepicker
+	$("[data-role='datepicker']" ).datepicker({
+		showOn:"both",
+		buttonText: '',
+		dateFormat: 'yy-mm-dd',
+		changeYear: true,
+		yearRange: "1900:+nn"
+	});
+});
+</script>
+</head>
+<body class="p_frm">
+<div class="page_frame cr_manage"><!-- 20220410 : 이력관리 클래스 cr_manage -->
+	<div class="frm_top">
+		<div class="inner">
+			<div class="head">
+				<h1>이력관리</h1>
+				<div class="noti">
+					<p class="desc">
+						<i class="m_icon_out circle_notifications"></i>
+						<span class="time">2022.03.02 00:00:00</span>
+						업데이트(최근 8일) 되었습니다.
+					</p>
+				</div>
+			</div>
+			<div class="nav">
+				<div class="role">
+					<!-- 20220313 : 이력관리 팝업 메뉴 -->
+					<a href="#role_pop" title="이력관리 란?">
+						<i class="m_icon more_vert"><span class="sr_only">정보</span></i>
+						<div class="role_pop">
+							<p class="lab">[이력관리 란?]</p>
+							<ul class="item_li">
+								<li>이력 관리는 수강 신청 및 필기 평가 원서 접수 후 <span class="c_green">수강 및 응시에 자격심사</span>에 필요한 서류들을 입력하는 화면입니다.</li>
+								<li>정보 누락 및 허위 정보 기재로 인해 불이익 당하시는 일이 없도록 정확한 정보를 기재하여 주시기 바랍니다.</li>
+							</ul>
+						</div>
+					</a>
+					<!-- //20220313 : 이력관리 팝업 메뉴 -->
+					<!-- 20220410 : 모바일 알림 버튼 추가 -->
+					<a href="#" class="alert">
+						<i class="m_icon_out notifications"><span class="sr_only">알림</span></i>
+					</a>
+					<!-- //20220410 : 모바일 알림 버튼 추가 -->
+					<a href="#" class="vt save">저장</a>
+					<a href="#" title="닫기" class="x" onClick="window.close()">
+						<i class="m_icon clear"><span class="sr_only">닫기</span></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="frm_ct">
+		<!-- 콘텐츠 -->
+		<p class="bl_title">기본정보 (필수입력)</p>
+		<table class="tbl_row al">
+			<colgroup>
+				<col style="width:16%;">
+				<col>
+				<col style="width:16%;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름</th>
+					<td>홍길동</td>
+					<th scope="row">성별</th>
+					<td>
+						<input type="radio" id="male" name="ck_gender">
+						<label for="male">남</label>
+						<input type="radio" id="female" name="ck_gender">
+						<label for="female">여</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">생년월일</th>
+					<td>
+						<div class="c_date">
+							<input type="text" title="생년월일" data-role="datepicker">
+						</div>
+					</td>
+					<th scope="row">권역</th>
+					<td>
+						<select name="" id="" title="권역">
+							<option value="">선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">지역</th>
+					<td>
+						<select name="" id="" title="지역">
+							<option value="">선택</option>
+						</select>
+					</td>
+					<th scope="row">세부지역</th>
+					<td>
+						<input type="text" class="wide" placeholder="구/시, 군을 입력하세요" title="세부지역">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일</th>
+					<td>test@gmail.com</td>
+					<th scope="row">핸드폰 번호</th>
+					<td>test@gmail.com</td>
+				</tr>
+				<tr>
+					<th scope="row">신청희망 자격급수</th>
+					<td>
+						<input type="radio" id="a_1_01" name="a_01">
+						<label for="a_1_01">1급</label>
+						<input type="radio" id="a_1_02" name="a_01">
+						<label for="a_1_02">2급</label>
+						<input type="radio" id="a_1_03" name="a_01">
+						<label for="a_1_03">3급</label>
+					</td>
+					<th scope="row">유사과목 면제</th>
+					<td>
+						<input type="radio" id="a_2_01" name="a_02">
+						<label for="a_2_01">해당 없음</label>
+						<input type="radio" id="a_2_02" name="a_02">
+						<label for="a_2_02">해당</label>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- <div class="cb_bar top">
+			<p class="bl_title">재직기관 (필수입력)</p>
+		</div>
+		<table class="tbl_row al">
+			<colgroup>
+				<col style="width:16%;">
+				<col>
+				<col style="width:16%;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">구분</th>
+					<td>
+						<input type="radio" id="b_1_01" name="b_01">
+						<label for="b_1_01">상근직</label>
+						<input type="radio" id="b_1_02" name="b_01">
+						<label for="b_1_02">비상근직</label>
+						<input type="radio" id="b_1_03" name="b_01">
+						<label for="b_1_03">프리랜서</label>
+					</td>
+					<th scope="row">직급</th>
+					<td><input type="text" class="wide" title="직급"></td>
+				</tr>
+				<tr>
+					<th scope="row">재직기관명</th>
+					<td colspan="3">
+						<input type="text" class="wd_m" placeholder="재직기관을 선택하여 주세요" title="직급" readonly>
+						<a href="#find_org" class="c_btn bk">찾기</a>
+					</td>
+				</tr>
+			</tbody>
+		</table> -->
+		<!-- <div class="ct_box">
+			<ul class="ref red">
+				<li>필수 이력정보를 추가하셔야 수강신청 가능합니다.</li>
+			</ul>
+		</div> -->
+		<!-- 20220313 : 입력된 정보없을 때 -->
+		<div class="hs_no_data">
+			<p class="note">입력된 기본정보가 없습니다.</p>
+			<ul class="item_li">
+				<li>먼저 기본정보를 입력하셔야 <span class="c_green">이력 관리 항목 들을 등록</span>하실 수 있습니다.</li>
+			</ul>
+			<p class="lab top">[이력관리 란?]</p>
+			<ul class="item_li">
+				<li>이력 관리는 수강 신청 및 필기 평가 원서 접수 후 <span class="c_bk">수강 및 응시에 자격심사</span>에 필요한 서류들을 입력하는 화면으로 기본 정보를 저장 하시면 하단에 입력할 수 있는 항목들이 보여 집니다.</li>
+				<li>정보 누락 및 허위 정보 기재로 인해 불이익 당하시는 일이 없도록 정확한 정보를 기재하여 주시기 바랍니다.</li>
+			</ul>
+		</div>
+		<!-- //20220313 : 입력된 정보없을 때 -->
+		<div class="b_box">
+			<a href="03_edu_01_app_03_finish.html" class="c_btn md green">저장</a>
+		</div>
+		<div class="cb_bar top">
+			<p class="bl_title">사회환경교육지도사 자격 취득이력</p>
+		</div>
+		<div class="tbl_rps_data">
+			<table class="tbl_data">
+				<caption>자격 취득이력</caption>
+				<tbody>
+					<tr>
+						<td><div class="no_info">등록된 정보가 없습니다.</div></td>
+					</tr>
+				</tbody>
+			</table>
+			<br><br>
+			<table class="tbl_data">
+				<caption>자격 취득이력</caption>
+				<colgroup>
+					<col>
+					<col style="width:20%;">
+					<col style="width:20%;">
+					<col style="width:20%;">
+					<col style="width:10%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">자격번호</th>
+						<th scope="col">자격취득 기관</th>
+						<th scope="col">취득등급</th>
+						<th scope="col">자격취득일</th>
+						<th scope="col">관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="th">자격번호</div>
+							<div class="td">1231234</div>
+						</td>
+						<td>
+							<div class="th">자격취득 기관</div>
+							<div class="td">환경교육사 자격평가</div>
+						</td>
+						<td>
+							<div class="th">취득등급</div>
+							<div class="td">1등급</div>
+						</td>
+						<td>
+							<div class="th">자격취득일</div>
+							<div class="td">2022.10.10</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="th">자격번호</div>
+							<div class="td">1231234</div>
+						</td>
+						<td>
+							<div class="th">자격취득 기관</div>
+							<div class="td">환경교육사 자격평가</div>
+						</td>
+						<td>
+							<div class="th">취득등급</div>
+							<div class="td">1등급</div>
+						</td>
+						<td>
+							<div class="th">자격취득일</div>
+							<div class="td">2022.10.10</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="cb_bar top">
+			<p class="bl_title">면제과목 (필수입력)</p>
+			<div class="add">
+				<a href="#major_subject" class="c_btn bk">유사전공 인정과목 확인</a>
+				<a href="#add_subject" class="c_btn green">추가</a>
+			</div>
+		</div>
+		<div class="tbl_rps_data">
+			<table class="tbl_data">
+				<caption>면제과목</caption>
+				<colgroup>
+					<col>
+					<col style="width:20%;">
+					<col style="width:20%;">
+					<col style="width:20%;">
+					<col style="width:10%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">과목명</th>
+						<th scope="col">면제여부</th>
+						<th scope="col">수강희망여부</th>
+						<th scope="col">증빙</th>
+						<th scope="col">관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="th">과목명</div>
+							<div class="td">환경교육사</div>
+						</td>
+						<td>
+							<div class="th">면제여부</div>
+							<div class="td"></div>
+						</td>
+						<td>
+							<div class="th">수강희망여부</div>
+							<div class="td"></div>
+						</td>
+						<td>
+							<div class="th">증빙</div>
+							<div class="td"></div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="th">과목명</div>
+							<div class="td">환경교육사</div>
+						</td>
+						<td>
+							<div class="th">면제여부</div>
+							<div class="td"></div>
+						</td>
+						<td>
+							<div class="th">수강희망여부</div>
+							<div class="td"></div>
+						</td>
+						<td>
+							<div class="th">증빙</div>
+							<div class="td"></div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="cb_bar top">
+			<p class="bl_title">근무이력 (필수입력) : <span class="c_cyan">총 00년 00개월</span></p>
+			<div class="add">
+				<a href="#work_career" class="c_btn green">추가</a>
+			</div>
+		</div>
+		<div class="tbl_rps_data">
+			<table class="tbl_data">
+				<caption>근무이력</caption>
+				<colgroup>
+					<col style="width:10%;">
+					<col>
+					<col style="width:15%;">
+					<col style="width:15%;">
+					<col style="width:10%;">
+					<col style="width:15%;">
+					<col style="width:15%;">
+					<col style="width:10%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">기관명</th>
+						<th scope="col">사회환경교육기관<br>지정여부</th>
+						<th scope="col">근무기간</th>
+						<th scope="col">직급</th>
+						<th scope="col">대상업무</th>
+						<th scope="col">첨부<br>지정서/재직증명서</th>
+						<th scope="col">관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="th">구분</div>
+							<div class="td">프리랜서</div>
+						</td>
+						<td>
+							<div class="th">기관명</div>
+							<div class="td">-</div>
+						</td>
+						<td>
+							<div class="th">사회환경교육기관<br>지정여부</div>
+							<div class="td">-</div>
+						</td>
+						<td>
+							<div class="th">근무기간</div>
+							<div class="td">-</div>
+						</td>
+						<td>
+							<div class="th">직급</div>
+							<div class="td">-</div>
+						</td>
+						<td>
+							<div class="th">대상업무</div>
+							<div class="td">-</div>
+						</td>
+						<td>
+							<div class="th">첨부<br>지정서/재직증명서</div>
+							<div class="td">-</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="th">구분</div>
+							<div class="td">상근직</div>
+						</td>
+						<td>
+							<div class="th">기관명</div>
+							<div class="td">환경보전협회</div>
+						</td>
+						<td>
+							<div class="th">사회환경교육기관<br>지정여부</div>
+							<div class="td">예</div>
+						</td>
+						<td>
+							<div class="th">근무기간</div>
+							<div class="td">2022-01-01 ~ 현재</div>
+						</td>
+						<td>
+							<div class="th">직급</div>
+							<div class="td">사원</div>
+						</td>
+						<td>
+							<div class="th">대상업무</div>
+							<div class="td">홍보</div>
+						</td>
+						<td>
+							<div class="th">첨부<br>지정서/재직증명서</div>
+							<div class="td">
+								<div class="td_file">지정서.pdf</div>
+								<div class="td_file">재직증명서.pdf</div>
+							</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="cb_bar top">
+			<p class="bl_title">학력사항 (필수입력)</p>
+			<div class="add">
+				<a href="#add_edu" class="c_btn green">추가</a>
+			</div>
+		</div>
+		<div class="tbl_rps_data">
+			<table class="tbl_data">
+				<caption>학력사항</caption>
+				<colgroup>
+					<col style="width:15%;">
+					<col>
+					<col style="width:12%;">
+					<col style="width:12%;">
+					<col style="width:12%;">
+					<col style="width:10%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">학교명</th>
+						<th scope="col">과정(학과, 전공)</th>
+						<th scope="col">학위</th>
+						<th scope="col">학위 취득일</th>
+						<th scope="col">학위증명서</th>
+						<th scope="col">관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="th">학교명</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">과정(학과, 전공)</div>
+							<div class="td">경제대학 국제물류학과</div>
+						</td>
+						<td>
+							<div class="th">학위</div>
+							<div class="td">박사</div>
+						</td>
+						<td>
+							<div class="th">학위 취득일</div>
+							<div class="td">2022.10.10</div>
+						</td>
+						<td>
+							<div class="th">학위증명서</div>
+							<div class="td"><a href="#"><img src="../../images/www/icon/ic_attach_file.png" alt="파일 첨부"></a></div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="th">학교명</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">과정(학과, 전공)</div>
+							<div class="td">경제대학 국제물류학과</div>
+						</td>
+						<td>
+							<div class="th">학위</div>
+							<div class="td">박사</div>
+						</td>
+						<td>
+							<div class="th">학위 취득일</div>
+							<div class="td">2022.10.10</div>
+						</td>
+						<td>
+							<div class="th">학위증명서</div>
+							<div class="td"><a href="#"><img src="../../images/www/icon/ic_attach_file.png" alt="파일 첨부"></a></div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="ct_box">
+			<ul class="ref orange">
+				<li>환경관련 학사학위 증명서류(해당자에 한함)</li>
+			</ul>
+		</div>
+		<div class="cb_bar top">
+			<p class="bl_title">환경교육 경력사항 (필수입력)</p>
+			<div class="add">
+				<a href="#add_career" class="c_btn green">추가</a>
+			</div>
+		</div>
+		<div class="tbl_rps_data">
+			<table class="tbl_data">
+				<caption>환경교육 경력사항</caption>
+				<colgroup>
+					<col>
+					<col style="width:18%;">
+					<col style="width:10%;">
+					<col style="width:14%;">
+					<col style="width:10%;">
+					<col style="width:10%;">
+					<col style="width:10%;">
+					<col style="width:10%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">활동분야</th>
+						<th scope="col">재직기간</th>
+						<th scope="col">활동시간</th>
+						<th scope="col">확인기관</th>
+						<th scope="col">확인서</th>
+						<th scope="col">정관</th>
+						<th scope="col">상태</th>
+						<th scope="col">관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="th">활동분야</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">재직기간</div>
+							<div class="td">2022.10.10 ~ 2022.10.10</div>
+						</td>
+						<td>
+							<div class="th">활동시간</div>
+							<div class="td">100</div>
+						</td>
+						<td>
+							<div class="th">확인기관</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">확인서</div>
+							<div class="td"><a href="#"><img src="../../images/www/icon/ic_attach_file.png" alt="파일 첨부"></a></div>
+						</td>
+						<td>
+							<div class="th">정관</div>
+							<div class="td">
+								<a href="#"><img src="../../images/www/icon/ic_attach_file.png" alt="파일 첨부"></a>
+								<a href="#" class="mls"><img src="../../images/www/icon/ic_pdf_view.png" alt="PDF"></a><!-- 20220327 : PDF 보기 -->
+							</div>
+						</td>
+						<td>
+							<div class="th">상태</div>
+							<div class="td"><span class="c_blue">진행중</span></div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="th">활동분야</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">재직기간</div>
+							<div class="td">2022.10.10 ~ 2022.10.10</div>
+						</td>
+						<td>
+							<div class="th">활동시간</div>
+							<div class="td">100</div>
+						</td>
+						<td>
+							<div class="th">확인기관</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">확인서</div>
+							<div class="td"><a href="#"><img src="../../images/www/icon/ic_attach_file.png" alt="파일 첨부"></a></div>
+						</td>
+						<td>
+							<div class="th">정관</div>
+							<div class="td">
+								<a href="#"><img src="../../images/www/icon/ic_attach_file.png" alt="파일 첨부"></a>
+								<a href="#" class="mls"><img src="../../images/www/icon/ic_pdf_view.png" alt="PDF"></a>
+							</div>
+						</td>
+						<td>
+							<div class="th">상태</div>
+							<div class="td">종료</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="ct_box">
+			<ul class="ref orange">
+				<li>3급(정규)과정 신청 시, 환경교육 경력사항은 필수 아님(시스템 상 등록을 위해 기타 파일 첨부 요청)</li>
+				<li>사회환경교육기관 경력의 경우, 정관 필수 첨부</li>
+			</ul>
+		</div>
+		<div class="cb_bar top">
+			<p class="bl_title">기타사항</p>
+			<div class="add">
+				<a href="#" class="c_btn green">추가</a>
+			</div>
+		</div>
+		<div class="tbl_rps_data">
+			<table class="tbl_data">
+				<caption>기타사항</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col style="width:10%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">기타항목</th>
+						<th scope="col">기타증빙</th>
+						<th scope="col">관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="th">기타항목</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">기타증빙</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="th">기타항목</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">기타증빙</div>
+							<div class="td">OOOOO</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn sm b_green">수정</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="ct_box">
+			<ul class="ref orange">
+				<li>인턴 지원자의 경우 추가제출서류(응시원서, 자기소개서, 개인정보활용동의서 등) 필수 첨부</li>
+			</ul>
+		</div>
+		<!-- 20220327 : 자격등급 테이블 -->
+		<div class="cb_bar top">
+			<p class="bl_title">자격등급 검토 이력</p>
+			<div class="add">
+				<a href="#" class="c_btn bk">상세엑셀다운로드</a>
+			</div>
+		</div>
+		<div class="fx_box sm">
+			<table class="tbl_row2 mo_sm">
+				<colgroup>
+					<col style="width:10%;">
+					<col>
+					<col style="width:15%;">
+					<col style="width:20%;">
+					<col style="width:15%;">
+					<col style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" rowspan="2">검토 등급</th>
+						<th scope="col" rowspan="2">과정 및 시험</th>
+						<th scope="col" colspan="2">양성기관</th>
+						<th scope="col" colspan="2">운영사무국</th>
+					</tr>
+					<tr>
+						<th scope="col">검토결과</th>
+						<th scope="col">최종검토일</th>
+						<th scope="col">검토결과</th>
+						<th scope="col">최종검토일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>3급</td>
+						<td>보수교육</td>
+						<td>적합</td>
+						<td>2022-04-20</td>
+						<td>심사전</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>3급</td>
+						<td>실무과정</td>
+						<td>적합</td>
+						<td>2022-03-20</td>
+						<td>적합</td>
+						<td>2020-03-20</td>
+					</tr>
+					<tr>
+						<td>3급</td>
+						<td>필기시험</td>
+						<td>적합</td>
+						<td>2022-02-20</td>
+						<td>적합</td>
+						<td>2020-02-20</td>
+					</tr>
+					<tr>
+						<td>3급</td>
+						<td>기본과정</td>
+						<td>적합</td>
+						<td>2022-01-20</td>
+						<td>적합</td>
+						<td>2020-01-20</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //20220327 : 자격등급 테이블 -->
+		<!-- <div class="ct_box">
+			<ul class="ref orange">
+				<li>교육생이 신청한 희망급수에 대한 자격 검토 결과 이력을 관리합니다.</li>
+			</ul>
+		</div> -->
+		<!-- //콘텐츠 -->
+	</div>
+</div>
+<div class="ct_dialog" id="add_cert" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:640px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">사회환경교육지도사 자격 취득이력</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<table class="tbl_row al">
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">자격번호</th>
+								<td>
+									<input type="text" class="wide" title="자격번호">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">자격취득 기관</th>
+								<td>
+									<input type="text" class="wide" title="자격취득 기관">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">자격취득 등급</th>
+								<td>
+									<input type="radio" id="cert_1_01" name="cert_1">
+									<label for="cert_1_01">1급</label>
+									<input type="radio" id="cert_1_02" name="cert_1">
+									<label for="cert_1_02">2급</label>
+									<input type="radio" id="cert_1_03" name="cert_1">
+									<label for="cert_1_03">3급</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">자격취득일</th>
+								<td>
+									<div class="c_date">
+										<input type="text" title="자격취득일" data-role="datepicker">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b_box">
+						<a href="#" class="c_btn wt">취소</a>
+						<a href="#" class="c_btn gray">삭제</a>
+						<a href="#" class="c_btn d_green">저장</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ct_dialog" id="add_subject" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:640px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">면제과목</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<table class="tbl_row al">
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">과목계열</th>
+								<td>
+									<select name="" id="" title="과목계열">
+										<option value="">OOO</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">인정과목</th>
+								<td>
+									<select name="" id="" title="인정과목">
+										<option value="">OOO</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">수강희망여부</th>
+								<td>
+									<input type="radio" id="appwish_01" name="appwish">
+									<label for="appwish_01">예</label>
+									<input type="radio" id="appwish_02" name="appwish">
+									<label for="appwish_02">아니오</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">증빙서류</th>
+								<td>
+									<input type="file" title="증빙서류">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b_box">
+						<a href="#" class="c_btn wt">취소</a>
+						<a href="#" class="c_btn gray">삭제</a>
+						<a href="#" class="c_btn d_green">저장</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ct_dialog" id="major_subject" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:640px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">유사전공 인정과목</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<table class="tbl_data mo_sm"><!-- 20220410 : 모바일 클래스 mo_sm -->
+						<caption>유사전공 인정과목</caption>
+						<colgroup>
+							<col style="width:22%;">
+							<col>
+							<col style="width:20%;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">과목계열</th>
+								<th scope="col">인정과목</th>
+								<th scope="col">과목수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>환경과 철학</td>
+								<td class="al">환경학개론, 환경철학, 환경보호론, 환경사회학</td>
+								<td>1과목</td>
+							</tr>
+							<tr>
+								<td>환경교육론</td>
+								<td class="al">환경교육론, 지속가능발전교육론</td>
+								<td>1과목</td>
+							</tr>
+							<tr>
+								<td>환경생태학</td>
+								<td class="al">환경생태학, 생물환경론</td>
+								<td>1과목</td>
+							</tr>
+							<tr>
+								<td>생활환경문제와<br>환경보건</td>
+								<td class="al">수질환경(학), 수질오염(론), 토양환경(학), 토양오염(론), 대기환경(학), 대기오염(론) 환경과 에머지, 자원과 에너지, 환경화학, 환경일반화학, 소음진동(학), 자원과 폐기물관리(학), 자원순환형 폐기물관리(론), 환경보건(학), 환경과 건강, 환경위생 및 보건</td>
+								<td>2과목</td>
+							</tr>
+							<tr>
+								<td>기후위기와<br>지구환경문제</td>
+								<td class="al">지구환경론, 환경지리학</td>
+								<td>1과목</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b_box">
+						<a href="#" class="c_btn wt">닫기</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ct_dialog" id="work_career" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:700px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">근무이력</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<table class="tbl_row al">
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">구분</th>
+								<td>
+									<input type="radio" id="work_1_01" name="work_01">
+									<label for="work_1_01">상근직</label>
+									<input type="radio" id="work_1_02" name="work_01">
+									<label for="work_1_02">비상근직</label>
+									<input type="radio" id="work_1_03" name="work_01">
+									<label for="work_1_03">프리랜서</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">기관명</th>
+								<td>
+									<input type="text" placeholder="재직기관을 선택하여 주세요" title="기관명" readonly="">
+									<a href="#find_org" class="c_btn bk">찾기</a>
+									<div class="vspace"></div>
+									<input type="checkbox" id="">
+									<label for="">사회환경교육기관 지정여부​</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">근무기간</th>
+								<td>
+									<div class="c_date">
+										<input type="text" placeholder="시작일" title="시작일" data-role="datepicker">
+									</div>
+									~
+									<div class="c_date">
+										<input type="text" placeholder="종료일" title="종료일" data-role="datepicker">
+									</div>
+									<div class="vspace"></div>
+									<input type="checkbox" id="">
+									<label for="">현재 근무 중</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">직급</th>
+								<td>
+									<input type="text" class="wide" title="직급">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">대상업무</th>
+								<td>
+									<select name="" id="">
+										<option value="">기관 총괄업무</option>
+									</select>
+									<div class="vspace"></div>
+									<input type="text" class="wide" placeholder="기타 대상업무를 입력하세요" title="기타">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">지정서 첨부</th>
+								<td>
+									<input type="file" title="지정서">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">재직증명 첨부</th>
+								<td>
+									<input type="file" title="재직증명">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b_box">
+						<a href="#" class="c_btn wt">취소</a>
+						<a href="#" class="c_btn gray">삭제</a>
+						<a href="#" class="c_btn d_green">등록</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ct_dialog" id="find_org" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:640px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">재직기관 선택</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<div class="sch_bar">
+						<div class="inner">
+							<div class="col">
+								<select title="검색 범위">
+									<option>기관유형</option>
+								</select>
+							</div>
+							<div class="comb">
+								<input type="text" class="key" placeholder="검색어를 입력하세요" title="검색어">
+								<a href="#" class="c_btn bk">검색</a>
+							</div>
+						</div>
+					</div>
+					<div class="tbl_rps_data">
+						<table class="tbl_data sm">
+							<caption>재직기관</caption>
+							<colgroup>
+								<col style="width:150px;">
+								<col>
+								<col style="width:150px;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">기관유형</th>
+									<th scope="col">기관명</th>
+									<th scope="col">선택</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="th">기관유형</div>
+										<div class="td">OOO</div>
+									</td>
+									<td>
+										<div class="th">기관명</div>
+										<div class="td">OOOOOO</div>
+									</td>
+									<td>
+										<div class="th">선택</div>
+										<div class="td"><a href="#" class="c_btn sm b_green">선택</a></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="th">기관유형</div>
+										<div class="td">OOO</div>
+									</td>
+									<td>
+										<div class="th">기관명</div>
+										<div class="td">OOOOOO</div>
+									</td>
+									<td>
+										<div class="th">선택</div>
+										<div class="td"><a href="#" class="c_btn sm b_green">선택</a></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ct_dialog" id="add_edu" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:700px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">학력사항</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<table class="tbl_row al">
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">학교명</th>
+								<td>
+									<input type="text" class="wide" title="학교명">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">학과</th>
+								<td>
+									<input type="text" class="wide" title="학과">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">전공</th>
+								<td>
+									<input type="text" class="wide" title="전공">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">학위</th>
+								<td>
+									<input type="radio" id="edu_1_01" name="edu_01">
+									<label for="edu_1_01">학사</label>
+									<input type="radio" id="edu_1_02" name="edu_01">
+									<label for="edu_1_02">석사</label>
+									<input type="radio" id="edu_1_03" name="edu_01">
+									<label for="edu_1_03">박사</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">학위취득일</th>
+								<td>
+									<div class="c_date">
+										<input type="text" title="학위취득일" data-role="datepicker">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">학위증명서</th>
+								<td>
+									<input type="file" title="학위증명서">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b_box">
+						<a href="#" class="c_btn wt">취소</a>
+						<a href="#" class="c_btn d_green">등록</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ct_dialog" id="add_career" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:700px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">환경교육 경력사항</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<table class="tbl_row al">
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">활동분야</th>
+								<td>
+									<input type="radio" id="act_1_01" name="act_01">
+									<label for="act_1_01">기획</label>
+									<input type="radio" id="act_1_02" name="act_01">
+									<label for="act_1_02">진행</label>
+									<input type="radio" id="act_1_03" name="act_01">
+									<label for="act_1_03">분석</label>
+									<input type="radio" id="act_1_04" name="act_01">
+									<label for="act_1_04">평가</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">재직기간</th>
+								<td>
+									<div class="c_date">
+										<input type="text" placeholder="시작일" title="시작일" data-role="datepicker">
+									</div>
+									~
+									<div class="c_date">
+										<input type="text" placeholder="종료일" title="종료일" data-role="datepicker">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">활동시간</th>
+								<td>
+									<input type="text" class="wd_s" title="활동시간">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">확인기관</th>
+								<td>
+									<input type="radio" id="org_2_01" name="org_02">
+									<label for="org_2_01">학사</label>
+									<input type="radio" id="org_2_02" name="org_02">
+									<label for="org_2_02">석사</label>
+									<input type="radio" id="org_2_03" name="org_02">
+									<label for="org_2_03">박사</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">활동내역</th>
+								<td>
+									<input type="text" class="wide" title="활동내역">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">확인서</th>
+								<td>
+									<input type="file" title="확인서">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">정관</th>
+								<td>
+									<input type="file" title="정관">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b_box">
+						<a href="#" class="c_btn wt">취소</a>
+						<a href="#" class="c_btn d_green">등록</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

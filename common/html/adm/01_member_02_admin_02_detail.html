@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가 관리자</title>
+<link rel="stylesheet" href="../../font/CoreUI-Icons.min.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../../lib/jquery.mCustomScrollbar.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="../../../lib/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- jquery ui -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<!-- //jquery ui -->
+<script src="../../js/adm/design.js"></script>
+<link rel="stylesheet" href="../../css/adm/common.css">
+<script>
+jQuery(function($){
+	//팝업
+	$('a[href="#sample"]').on('click', function(e){
+		e.preventDefault();
+		var target = $($(this).attr('href'));
+		if(target.is(':hidden')){
+			target.fadeIn();
+		} else {
+			target.fadeOut();
+		};
+		target.attr("tabindex","0");
+		$(this).attr('data-focus','on');
+		target.focus();
+	});
+	$("[data-role='datepicker']" ).datepicker({
+		showOn:"both",
+		buttonText: '',
+		dateFormat: 'yy-mm-dd',
+		changeYear: true,
+		yearRange: "1900:+nn"
+	});
+});
+</script>
+</head>
+<body>
+<div class="adm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- side -->
+	<div class="side_nav">
+		<?php
+		include "inc/side_nav.html";
+		?>
+	</div>
+	<!-- //side -->
+	<div id="container">
+		<div class="foreword">
+			<h2>관리자 목록</h2>
+			<div class="path">
+				<span>홈</span>
+				<span>회원</span>
+				<span>관리자</span>
+				<span>메뉴</span>
+			</div>
+		</div>
+		<div id="content">
+			<!-- 콘텐츠 -->
+			<h3 class="ct_title">기관관리자 상세/수정</h3>
+			<div class="cb_bar">
+				<div>
+					<a href="#" class="ad_btn blue">허용관리</a>
+				</div>
+			</div>
+			<table class="tbl_row">
+				<caption>기관관리자 상세정보</caption>
+				<colgroup>
+					<col style="width:200px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">아이디<span class="c_red">*</span></th>
+						<td>Nohkkh<a href="#" class="ml ad_btn gray">비밀번호 변경</a></td>
+					</tr>
+					<tr>
+						<th scope="row">소속 기관<span class="c_red">*</span></th>
+						<td>인천광역시 미추홀구 인천업사이클에코센터​</td>
+					</tr>
+					<tr>
+						<th scope="row">이름<span class="c_red">*</span></th>
+						<td>홍길동</td>
+					</tr>
+					<tr>
+						<th scope="row">직급<span class="c_red">*</span></th>
+						<td>
+							<input type="text" value="부장">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">전화번호<span class="c_red">*</span></th>
+						<td><input type="text" value="0212341234"></td>
+					</tr>
+					<tr>
+						<th scope="row">이메일<span class="c_red">*</span></th>
+						<td><input type="text" value="nohkkh@test.com​"></td>
+					</tr>
+					<tr>
+						<th scope="row">상태<span class="c_red">*</span></th>
+						<td>
+							<input type="radio" id="">
+							<label for="">운영</label>
+							<input type="radio" id="">
+							<label for="">대기</label>
+							<input type="radio" id="">
+							<label for="">폐강</label>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">팝업 입력</th>
+						<td>
+							<input type="text" readonly>
+							<a href="#sample" class="ad_btn gray">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">날짜 입력</th>
+						<td>
+							<div class="ad_datepicker">
+								<input type="text" placeholder="시작일" data-role="datepicker">
+							</div>
+							~
+							<div class="ad_datepicker">
+								<input type="text" placeholder="종료일" data-role="datepicker">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">셀렉트박스 입력</th>
+						<td>
+							<select name="" id="">
+								<option value="">선택</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">텍스트 입력</th>
+						<td>
+							<textarea name="" id="" cols="" rows="" style="height:100px;"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">첨부 파일</th>
+						<td>
+							<input type="file">
+							<ul class="file_li">
+								<li>
+									<a href="#" class="file">OOOOOOOO.xls</a>
+									<a href="#" class="del" title="삭제"><span class="sr_only">삭제</span></a>
+								</li>
+								<li>
+									<a href="#" class="file">OOOOOOOO.xls</a>
+									<a href="#" class="del" title="삭제"><span class="sr_only">삭제</span></a>
+								</li>
+								<li>
+									<a href="#" class="file">OOOOOOOO.xls</a>
+									<a href="#" class="del" title="삭제"><span class="sr_only">삭제</span></a>
+								</li>
+							</ul>
+							<p class="tb_note">용량 :1회 최대50MB, 5개 파일까지 올릴 수 있습니다.​</p>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">주민번호 입력</th>
+						<td>
+							<input type="text" style="width:120px;">
+							~
+							<input type="text" style="width:120px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">휴대폰 입력</th>
+						<td>
+							<select name="" id="">
+								<option value="">010</option>
+							</select>
+							<input type="text" style="width:120px;">
+							~
+							<input type="text" style="width:120px;">
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">생년월일 입력</th>
+						<td>
+							<select name="" id="" style="width:80px;">
+								<option value="">년</option>
+							</select>
+							<select name="" id="" style="width:60px;">
+								<option value="">월</option>
+							</select>
+							<select name="" id="" style="width:60px;">
+								<option value="">일</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">주소 입력</th>
+						<td>
+							<input type="text" readonly>
+							<a href="#" class="ad_btn gray">주소 찾기</a>
+							<input type="text" class="wide mts">
+							<input type="text" class="wide mts">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="b_box right">
+				<a href="#" class="ad_btn bk mid">목록</a>
+				<a href="#" class="ad_btn green mid">저장</a>
+				<a href="#" class="ad_btn bk mid">삭제</a>
+			</div>
+			<!-- //콘텐츠 -->
+		</div>
+	</div>
+</div>
+<div class="ct_dialog" id="sample" style="display:none;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:400px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">관리자 팝업</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					관리자 팝업
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

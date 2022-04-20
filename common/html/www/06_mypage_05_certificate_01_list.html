@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+});
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div class="foreword ord_6">
+		<h2><span>자격증 발급·재발급</span></h2>
+		<div class="path">
+			<div class="rows">
+				<div class="home"><span class="sr_only">홈</span></div>
+				<div><span>마이페이지</span></div>
+				<div><span>자격증 발급·재발급</span></div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<!-- 콘텐츠 -->
+		<h3 class="ct_title">자격증 발급·재발급 신청 목록</h3>
+		<div class="cb_bar">
+			<div class="ct_box">
+				<p class="p_noti"><span class="c_red"><i class="m_icon_out circle_notifications"></i>[안내]</span></p>
+				<ul class="radio">
+					<li>법 개정(22년 1월 6일) 이전 자격증도 발급 신청도 가능합니다.</li>
+					<li>자격이 정지 혹은 취소된 경우에는 자격증 발급 및 출력이 제한됩니다.</li>
+				</ul>
+			</div>
+			<a href="#" class="c_btn green xs_wide">발급 신청</a><!-- 20220410 : 모바일 버튼 클래스 xs_wide -->
+		</div>
+		<div class="t_bar">
+			<div class="count">
+				총 <span class="num">21</span>건
+			</div>
+		</div>
+		<div class="tbl_rps_data">
+			<table class="tbl_data">
+				<caption>자격증 발급·재발급 신청 목록</caption>
+				<colgroup>
+					<col style="width:10%;">
+					<col>
+					<col style="width:12%;">
+					<col style="width:12%;">
+					<col style="width:12%;">
+					<col style="width:12%;">
+					<col style="width:12%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">자격증 발급번호</th>
+						<th scope="col">등급</th>
+						<th scope="col">발급일</th>
+						<th scope="col">상태</th>
+						<th scope="col">신청일</th>
+						<th scope="col">관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="th">구분</div>
+							<div class="td">발급</div>
+						</td>
+						<td class="al">
+							<div class="th">자격증 발급번호</div>
+							<div class="td">
+								<a href="06_mypage_05_certificate_02_register.html" class="tb_link">제 OOO호</a>
+							</div>
+						</td>
+						<td>
+							<div class="th">등급</div>
+							<div class="td">2급</div>
+						</td>
+						<td>
+							<div class="th">발급일</div>
+							<div class="td">2022.02.28</div>
+						</td>
+						<td>
+							<div class="th">상태</div>
+							<div class="td">신청</div>
+						</td>
+						<td>
+							<div class="th">신청일</div>
+							<div class="td">2022.02.10</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn bk sm">상세</a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="th">구분</div>
+							<div class="td">재발급</div>
+						</td>
+						<td class="al">
+							<div class="th">자격증 발급번호</div>
+							<div class="td"></div>
+						</td>
+						<td>
+							<div class="th">등급</div>
+							<div class="td">3급</div>
+						</td>
+						<td>
+							<div class="th">발급일</div>
+							<div class="td"></div>
+						</td>
+						<td>
+							<div class="th">상태</div>
+							<div class="td">승인</div>
+						</td>
+						<td>
+							<div class="th">신청일</div>
+							<div class="td">2022.02.10</div>
+						</td>
+						<td>
+							<div class="th">관리</div>
+							<div class="td">
+								<a href="#" class="c_btn l_green sm">자격증 출력</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="paginate">
+			<div class="inner">
+				<a href="#" class="img start"><span class="sr_only">처음</span></a>
+				<a href="#" class="img prev"><span class="sr_only">이전</span></a>
+				<span class="on">1</span>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#" class="img next"><span class="sr_only">다음</span></a>
+				<a href="#" class="img end"><span class="sr_only">마지막</span></a>
+			</div>
+		</div>
+		<!-- //콘텐츠 -->
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+	<!-- <a href="#" class="btn_top" title="TOP"><i class=""></i></a> -->
+</div>
+<!-- 이의 신청 구분 선택 -->
+<div class="ct_dialog" id="add_career" style="display:block;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:600px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">이의 신청 구분 선택</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<ul class="item_li bot">
+						<li>구분에 따라 이의 신청해야 하는 양식이 달라집니다.</li>
+						<li>기본과정, 실무과정, 보수교육의 경우에는 교육과정을 선택하여 주시고 필기시험(원서접수)의 경우에는 필기시험을 선택하여 주세요.</li>
+					</ul>
+					<table class="tbl_row al">
+						<colgroup>
+							<col style="width:25%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">구분</th>
+								<td>
+									<input type="radio" id="a_1_01" name="a_1_01">
+									<label for="a_1_01">교육과정</label>
+									<input type="radio" id="a_1_02" name="a_1_01">
+									<label for="a_1_02">필기시험</label>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="b_box">
+						<a href="#" class="c_btn wt">취소</a>
+						<a href="#" class="c_btn bk">이의 신청</a>
+					</div>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //이의 신청 구분 선택 -->
+</body>
+</html>

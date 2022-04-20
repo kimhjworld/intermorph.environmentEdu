@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	//jquery ui datepicker
+	$("[data-role='datepicker']" ).datepicker({
+		showOn:"both",
+		buttonText: '',
+		dateFormat: 'yy-mm-dd',
+		changeYear: true,
+		yearRange: "1900:+nn"
+	});
+});
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<?php
+		include "inc/sidr.html";
+		?>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div class="foreword ord_6">
+		<h2><span>원서접수</span></h2>
+		<div class="path">
+			<div class="rows">
+				<div class="home"><span class="sr_only">홈</span></div>
+				<div><span>평가신청</span></div>
+				<div><span>원서접수</span></div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<!-- 콘텐츠 -->
+		<h3 class="ct_title">원서접수</h3>
+		<div class="ct_box bot">
+			<ul class="radio">
+				<li>온라인(단짝) 수료자 혹은 유사과목 이수자는 반드시 이력관리의 면제과목에 증빙서류가 첨부 되어 있어야 합니다.</li>
+				<li>자료 미비로 불이익이 없도록 신청 완료 후 이력관리 정보를 확인 바랍니다.</li>
+			</ul>
+		</div>
+		<table class="tbl_row al">
+			<colgroup>
+				<col style="width:17%;">
+				<col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">이름</th>
+					<td>홍길동</td>
+				</tr>
+				<tr>
+					<th scope="row">생년월일</th>
+					<td>1999.01.01</td>
+				</tr>
+				<tr>
+					<th scope="row">휴대전화번호</th>
+					<td>
+						<input type="text" class="mo_wide" placeholder="- 없이 숫자만 입력" title="핸드폰번호">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">이메일</th>
+					<td>
+						<input type="text" class="mo_wide" title="이메일">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">사진 첨부</th>
+					<td>
+						<input type="file">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">편의제공 여부</th>
+					<td>예</td>
+				</tr>
+				<tr>
+					<th scope="row">편의제공 증빙</th>
+					<td>
+						<input type="file">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="c_title top">개인정보 수집 및 이용동의(필수)</p>
+		<div class="termbox">
+			<!-- 약관 -->
+			<table class="tbl_data line mo_sm">
+				<caption>개인정보 수집 및 이용동의</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col style="width:25%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">수집・이용하는 개인정보의 항목</th>
+						<th scope="col">개인정보의 수집・이용 목적</th>
+						<th scope="col">보유 및 이용 기간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>사진, 수험번호</td>
+						<td>환경교육사 자격시험 응시자 본인 확인 및 자격⦁이력 관리</td>
+						<td><span class="term_str">준영구</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="ct_box">
+				<ul class="ref">
+					<li>위의 개인정보 수집・이용에 대한 동의를 거부할 권리가 있습니다.</li>
+				</ul>
+				<p>그러나, 동의를 거부할 경우 환경교육사 필기시험 원서접수를 할 수 없습니다.</p>
+			</div>
+			<!-- //약관 -->
+		</div>
+		<div class="ag_term">
+			<input type="checkbox" id="t_01">
+			<label for="t_01">동의합니다.</label>
+		</div>
+		<p class="c_title top">민감정보 수집 및 이용동의(필수)</p>
+		<div class="termbox">
+			<!-- 약관 -->
+			<table class="tbl_data line mo_sm">
+				<caption>민감정보 수집 및 이용동의</caption>
+				<colgroup>
+					<col>
+					<col>
+					<col style="width:25%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">수집・이용하는 개인정보의 항목</th>
+						<th scope="col">개인정보의 수집・이용 목적</th>
+						<th scope="col">보유 및 이용 기간</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="term_str">편의제공 대상자 증명서류</span></td>
+						<td>필기시험 편의제공 대상자 확인</td>
+						<td><span class="term_str">필기시험일 후 30일까지</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="ct_box">
+				<ul class="ref">
+					<li>위의 개인정보 수집・이용에 대한 동의를 거부할 권리가 있습니다.</li>
+				</ul>
+				<p>그러나, 동의를 거부할 경우 환경교육사 필기시험 시 편의제공을 받을 수 없습니다.</p>
+			</div>
+			<!-- //약관 -->
+		</div>
+		<div class="ag_term">
+			<input type="checkbox" id="t_02">
+			<label for="t_02">동의합니다.</label>
+		</div>
+		<div class="ct_box">
+			<ul class="ref">
+				<li>민감정보 수집 및 이용 동의를 거부하시는 경우에는 편의제공 불필요로 신청해 주세요.</li>
+			</ul>
+		</div>
+		<div class="b_box">
+			<a href="#" class="c_btn gray mid">취소</a>
+			<a href="#" class="c_btn green mid">신청</a>
+		</div>
+		<!-- //콘텐츠 -->
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<?php
+		include "inc/footer.html";
+		?>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

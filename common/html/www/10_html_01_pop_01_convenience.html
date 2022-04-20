@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- jquery ui -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<!-- //jquery ui -->
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+
+})
+</script>
+</head>
+<body>
+<div class="ct_dialog" id="add_career" style="display:block;">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:768px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">장애유형별 편의 제공 안내</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<div class="fx_box sm">
+						<table class="tbl_row2 sm">
+							<caption>장애인 등 유형별 편의제공 사항</caption>
+							<colgroup>
+								<col style="width:10%;">
+								<col style="width:17%;">
+								<col style="width:13%;">
+								<col>
+								<col>
+								<col style="width:13%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" colspan="2">편의제공 대상</th>
+									<th scope="col">편의구분</th>
+									<th scope="col">필기 및 필답형 실기시험</th>
+									<th scope="col">작업형 실기시험</th>
+									<th scope="col">제출서류</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="8">시각 장애</td>
+									<td rowspan="4">중증 (장애의 정도가 심한 장애인)</td>
+									<td>시험시간</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.7배 연장</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.5배 연장</li>
+										</ul>
+									</td>
+									<td rowspan="4">①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td>문제인지 방법</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>음성지원컴퓨터</li>
+											<li>문제지대독</li>
+											<li>점자 문제지</li>
+											<li>확대 문제지</li>
+											<li>점자정보단말기</li>
+											<li>독서확대기 지참 허용</li>
+											<li class="ref">※ 상기 항목 중 택1</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>문제지대독</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>답안작성 방법</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>답안대필</li>
+											<li>확대 답안지</li>
+											<li>점자 답안지</li>
+											<li>점자정보단말기</li>
+											<li>음성지원컴퓨터 활용</li>
+											<li class="ref">※ 상기 항목 중 택1</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>기타</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>별도시험실 배정</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td rowspan="4">경증 (장애의 정도가 심하지 않은 장애인)</td>
+									<td>시험시간</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.5배 연장</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.3배 연장</li>
+										</ul>
+									</td>
+									<td rowspan="4">①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td>문제인지 방법</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>확대 문제지</li>
+											<li>독서확대기 지참 허용</li>
+											<li class="ref">※ 상기 항목 중 택1</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>답안작성 방법</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>확대 답안지</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>기타</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>별도시험실 배정</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td rowspan="3">뇌병변 장애</td>
+									<td rowspan="3">장애정도 구분 없음</td>
+									<td>시험시간</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.5배 연장</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.3배 연장</li>
+										</ul>
+									</td>
+									<td rowspan="3">①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td>답안작성 방법</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>답안대필</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>기타</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>별도시험실 배정(좌석 간격 조정)</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td rowspan="10">지체 장애</td>
+									<td rowspan="3">
+										⑴ 상지 중증(장애의 정도가 심한 장애인)
+									</td>
+									<td>시험시간</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.5배 연장</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.3배 연장</li>
+										</ul>
+									</td>
+									<td>①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td>답안작성 방법</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>답안대필</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>기타</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>별도시험실 배정</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td rowspan="3">⑵ 상지 경증(장애의 정도가 심하지 않은 장애인)</td>
+									<td>시험시간</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.2배 연장</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.2배 연장</li>
+										</ul>
+									</td>
+									<td>①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td>답안작성 방법</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>답안대필</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>기타</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>별도시험실 배정</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td rowspan="2">⑶ 하지(장애정도 구분 없음, 척추장애* 포함)</td>
+									<td>시험시간</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>일반 수험자와 동일</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>시험시간 1.1배 연장</li>
+											<li class="ref">※ 단, 시험 중 이동이 있거나 서서 작업하는 종목에 한정</li>
+										</ul>
+									</td>
+									<td rowspan="2">①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td>기타</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>별도시험실 배정(좌석 간격 조정)</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td rowspan="2">⑷ 복합장애 [상지+하지]</td>
+									<td>시험시간</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>상지 지체장애와 동일</li>
+										</ul>
+									</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>⑴ 또는 ⑵의 장애정도에 부여한 시간 + ⑶의 장애 시 추가 부여한 시간 연장</li>
+										</ul>
+									</td>
+									<td rowspan="2">①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td>답안작성 방법  및 기타</td>
+									<td>
+										<ul class="hypen_sm_li">
+											<li>상지 지체장애와 동일</li>
+										</ul>
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td>청각 장애</td>
+									<td>장애정도 구분 없음</td>
+									<td>기타</td>
+									<td colspan="2">
+										<ul class="hypen_sm_li">
+											<li>보청기 사용</li>
+											<li>수화통역사 또는 문자통역사 배치</li>
+											<li>응시요령 등 서면자료 제공</li>
+											<li>별도시험실 배정</li>
+										</ul>
+									</td>
+									<td>①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td>신장, 심장, 장루·요루 장애</td>
+									<td>장애정도 구분 없음</td>
+									<td>기타</td>
+									<td colspan="2">
+										<ul class="hypen_sm_li">
+											<li>시험 중 화장실 이용 제한(횟수 및 시간) 없음</li>
+										</ul>
+									</td>
+									<td>①,②,③호 중 하나</td>
+								</tr>
+								<tr>
+									<td rowspan="3">시험 응시에 지장이 있다고 의료 기관장이 인정한 자</td>
+									<td>일시적 신체장애</td>
+									<td>편의제공 사항전반</td>
+									<td colspan="2">
+										<ul class="hypen_sm_li">
+											<li>장애 유형 및 정도를 검증하여 결정</li>
+										</ul>
+									</td>
+									<td rowspan="2">④호</td>
+								</tr>
+								<tr>
+									<td>과민성대장 증후군, 과민성방광 증후군</td>
+									<td>기타</td>
+									<td colspan="2">
+										<ul class="hypen_sm_li">
+											<li>시험 중 화장실 이용 제한(횟수 및 시간) 없음</li>
+										</ul>
+									</td>
+								</tr>
+								<tr>
+									<td>임신부</td>
+									<td>기타</td>
+									<td colspan="2">
+										<ul class="hypen_sm_li">
+											<li>시험 중 화장실 이용 제한(횟수 및 시간) 없음</li>
+										</ul>
+									</td>
+									<td>④,⑤호 중 하나</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<ul class="num_sm_li top">
+						<li>
+							<span class="ord">※</span>
+							시험시간을 제외한 편의 제공사항은 수험자의 요청 및 시험시행 환경 등에 따라 시험 시행에 지장을 주지 않는 범위 내에서 조정될 수 있음
+						</li>
+						<li>
+							<span class="ord">※</span>
+							척추장애는 기본적으로 하지장애로 구분하며 의료법 제3조에 의한 종합병원에서 발급한 상지장애 진단서(장애정도 표기 필요, 소견서 불인정) 제출 시 상지장애로 구분
+						</li>
+						<li>
+							<span class="ord">※</span>
+							제출서류
+							<ul>
+								<li>
+									<span class="ord">①</span>
+									장애인복지법 제2조에 의한 장애인은 시장?도지사?군수?구청장이 발행한 장애인등록증(명서) 또는 장애인복지카드 사본 1부. 다만, 지체장애인의 경우에는 장애인등록증명서 사본 1부.
+								</li>
+								<li>
+									<span class="ord">②</span>
+									국가유공자 등 예우 및 지원에 관한 법률 시행령 제14조제3항에 의한 상이등급에 해당하는 자는 국가보훈처장이 발행한 국가유공자증 사본 및 상이등급과 상이부위 확인이 가능한 서류
+									<br>(상이판정 신체검사 결과통지서 등) 각 1부.
+								</li>
+								<li>
+									<span class="ord">③</span>
+									산업재해보상보험법 시행령 제53조제1항에 의한 장해급여지급 대상자로 결정된 자는 관계기관이 발행한 보험급여지급확인원 원본 1부.
+								</li>
+								<li>
+									<span class="ord">④</span>
+									의료법 제3조에 의한 병원급 의료기관에서 발급한 진단서 또는 소견서 원본 1부.
+									<ul>
+										<li>
+											<span class="ord">-</span>
+											일시적 신체장애로 인한 편의제공 요청사항 중 시험시간 연장이 포함될 경우 의료법 제3조에 의한 산업재해보상보험법 시행령 제53조제1항에 의한 장해급여지급 대상자로 결정된 자는 관계기관이 발행한 보험급여지급확인원 원본 1부.
+										</li>
+									</ul>
+									
+								</li>
+								<li>
+									<span class="ord">⑤</span>
+									임신부의 경우 의료법 제3조에 의한 의원급 또는 병원급 의료기관에서 발급한 임신사실확인서 원본 1부.
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span class="ord">※</span>
+							상이등급자인 경우 장애인복지법상의 장애정도를 기준으로 본인이 어떤 장애유형 및 정도에 해당하는지 확인
+						</li>
+						<li>
+							<span class="ord">※</span>
+							복합장애인 중 손부위 장애정도가 심한 장애인에 대한 시간 산정 방법(예시)
+							<div class="line_box">
+								? 시험시간이 60분인 경우(지체장애 중증상지장애① + 하지장애③ 작업형 시험 적용 시)
+								<br>⇒ ①의 장애 정도에 부여한 시간[표준시간(60분) + {(60분)*0.3)=78분]
+								<br>+ ③의 장애 시 추가 부여한 시간[(60분*0.1)=6분] = 84분
+							</div>
+						</li>
+					</ul>
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

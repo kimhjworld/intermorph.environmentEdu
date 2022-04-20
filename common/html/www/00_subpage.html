@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가</title>
+<link rel="shortcut icon" type="image/x-icon" href="../../images/www/common/favicon.ico">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<!-- lib -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<script src="../../../lib/slick.min.js"></script>
+<script src="../../../lib/jquery.rwdImageMaps.min.js"></script>
+<!-- //lib -->
+<script src="../../js/www/design.js"></script>
+<link rel="stylesheet" href="../../css/www/common.css">
+<script>
+jQuery(function($){
+	//jquery dialog
+	$("#dialog").dialog({
+		modal: true,
+		buttons: [
+			{
+				//버튼텍스트
+				text: "확인",
+				//클릭이벤트
+				click: function() {
+				$(this).dialog("close");
+				}
+			},
+			{
+				//버튼텍스트
+				text: "취소",
+				//클릭이벤트
+				click: function(){
+				$(this).dialog("close");
+				}
+			}
+		],
+		open: function(event, ui) {
+			$(this).closest('.ui-dialog').find('.ui-dialog-titlebar-close').hide();
+		}
+	});
+})
+</script>
+</head>
+<body>
+<div id="skip">
+	<a href="#gnb">주메뉴 바로가기</a>
+	<a href="#content">본문 바로가기</a>
+</div>
+<div class="ctm">
+	<!-- header -->
+	<div id="header" class="">
+		<div class="global">
+			<div class="top rows">
+				<h1 class="logo">
+					<a href="01_main.html"><span class="sr_only">환경교육사 자격평가</span></a>
+				</h1>
+				<a href="#sidr" class="nav_toggle">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="sr_only">모바일 메뉴</span>
+				</a>
+			</div>
+			<div class="rows">
+				<div class="link">
+					<ul>
+						<li>
+							<a href="#"><span>환경부</span></a>
+						</li>
+						<li>
+							<a href="#"><span>환경교육포털</span></a>
+						</li>
+						<li>
+							<a href="#"><span>단짝</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="member">
+					<ul>
+						<li>
+							<a href="#" class="log">로그인</a>
+						</li>
+						<li>
+							<a href="#" class="join">회원가입</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="frm">
+			<div class="nav">
+				<div class="rows">
+					<ul class="menu" id="gnb">
+						<li>
+							<a href="#">제도소개</a>
+							<ul>
+								<li><a href="01_intro_01_intro.html">환경교육사란?</a></li>
+								<li><a href="01_intro_02_intro.html">취득현황</a></li>
+								<li><a href="01_intro_03_intro.html">교육과정 소개</a></li>
+								<li><a href="01_intro_04_intro.html">보수교육 소개</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">양성기관 소개</a>
+							<ul>
+								<li><a href="02_organ_01_organ_01_list.html">3급 양성기관</a></li>
+								<li><a href="#">2급 양성기관</a></li>
+								<li><a href="#">1급 양성기관</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">교육신청</a>
+							<ul>
+								<li><a href="03_edu_01_app_01_list.html">3급 교육신청</a></li>
+								<li><a href="03_edu_01_app_01_list.html">2급 교육신청</a></li>
+								<li><a href="03_edu_01_app_01_list.html">1급 교육신청</a></li>
+								<li><a href="03_edu_02_schedule_01_list.html">연간교육일정</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">필기시험</a>
+							<ul>
+								<li><a href="#">1급 원서접수</a></li>
+								<li><a href="#">2급 원서접수</a></li>
+								<li><a href="#">3급 원서접수</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">알림마당</a>
+							<ul>
+								<li><a href="05_noti_01_notice_01_list.html">공지사항</a></li>
+								<li><a href="05_noti_02_data_01_list.html">자료실</a></li>
+								<li><a href="05_noti_03_faq_01_list.html">FAQ</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="06_mypage_01_dashboard.html">마이페이지</a>
+							<ul>
+								<li><a href="06_mypage_02_manage.html" target="_blank">이력관리</a></li>
+								<li><a href="06_mypage_03_state_01_apply_01_list.html">교육신청현황</a></li>
+								<li><a href="#">응시현황</a></li>
+								<li><a href="06_mypage_05_certificate_01_list.html">자격증 재∙전환발급</a></li>
+								<li><a href="#">보수교육 신청∙유예</a></li>
+								<li><a href="#">회원정보 수정</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+	<!-- 모바일 메뉴 -->
+	<div class="side_bar" id="sidr">
+		<div class="inner">
+			<div class="head">
+				<button type="button" class="tog"><i class="m_icon close"></i></button>
+				<ul class="gl">
+					<li><a href="#">로그인</a></li>
+					<li><a href="#">회원가입</a></li>
+				</ul>
+			</div>
+			<ul class="nav">
+				<li>
+					<a href="#">제도소개</a>
+					<ul>
+						<li><a href="#">환경교육사란?</a></li>
+						<li><a href="#">취득현황</a></li>
+						<li><a href="#">교육과정 소개?</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">양성기관 소개</a>
+					<ul>
+						<li><a href="#">3급 양성기관</a></li>
+						<li><a href="#">2급 양성기관</a></li>
+						<li><a href="#">1급 양성기관</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">교육신청</a>
+					<ul>
+						<li><a href="#">3급 교육신청</a></li>
+						<li><a href="#">2급 교육신청</a></li>
+						<li><a href="#">1급 교육신청</a></li>
+						<li><a href="#">연간교육일정</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">필기시험</a>
+					<ul>
+						<li><a href="#">1급 원서접수</a></li>
+						<li><a href="#">2급 원서접수</a></li>
+						<li><a href="#">3급 원서접수</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">알림마당</a>
+					<ul>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">자료실</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">마이페이지</a>
+					<ul>
+						<li><a href="#">이력관리</a></li>
+						<li><a href="#">교육신청현황</a></li>
+						<li><a href="#">응시현황</a></li>
+						<li><a href="#">자격증 재∙전환발급</a></li>
+						<li><a href="#">보수교육 신청∙유예</a></li>
+						<li><a href="#">회원정보 수정</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="foot">
+				<li><a href="http://me.go.kr/home/web/main.do" target="_blank"><img src="../../images/www/common/img_gl_me.png" alt="환경부"></a></li>
+				<li><a href="https://www.keep.go.kr/portal/1" target="_blank"><img src="../../images/www/common/img_gl_keep.png" alt="환경교육포털"></a></li>
+				<li><a href="https://danzzak.getsmart.co.kr/" target="_blank"><img src="../../images/www/common/img_gl_danzzak.png" alt="단짝"></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //모바일 메뉴 -->
+	<div class="foreword ord_5">
+		<h2><span>1뎁스</span></h2>
+		<div class="path">
+			<div class="rows">
+				<div class="home"><span class="sr_only">홈</span></div>
+				<div><span>메뉴</span></div>
+				<div><span>메뉴</span></div>
+			</div>
+		</div>
+	</div>
+	<div id="content">
+		<!-- 콘텐츠 -->
+		<h3 class="ct_title">페이지 타이틀</h3>
+		<!-- jquery 컨펌 -->
+		<div id="dialog" title="확인">
+			<p>수정하시겠습니까?</p>
+			<div style="text-align:center; margin-top:10px;">
+				<button type="button" class="button1">확인</button>
+				<button type="button" class="button2">취소</button>
+			</div>
+		</div>
+		<!-- //jquery 컨펌 -->
+		<!-- //콘텐츠 -->
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<div class="rows">
+			<p class="logo"><img src="../../images/www/common/logo_footer.png" alt="환경교육사 자격평가"></p>
+			<ul class="menu">
+				<li class="em"><a href="#">개인정보 처리방침</a></li>
+				<li><a href="#">이메일무단수집거부 추가</a></li>
+				<li><a href="#">이용약관</a></li>
+			</ul>
+			<address>
+				<p class="addr">서울특별시 성동구 광나루로 320-2 YD빌딩( 우:04799 )</p>
+				<p class="copy">COPYRIGHT 2022 MINISTRY OF ENVIRONMENT. ALL RIGHTS RESERVED</p>
+			</address>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

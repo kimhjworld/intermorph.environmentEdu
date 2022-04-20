@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no, address=no, email=no, date=no, url=no" />
+<title>환경교육사 자격평가 관리자</title>
+<link rel="stylesheet" href="../../font/CoreUI-Icons.min.css">
+<link rel="stylesheet" href="../../font/material-icons.css">
+<link rel="stylesheet" href="../../font/notosanskr.css">
+<link rel="stylesheet" href="../../../lib/jquery.mCustomScrollbar.css">
+<script src="../../js/jquery/jquery-1.9.1.min.js"></script>
+<script src="../../../lib/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- jquery ui -->
+<link rel="stylesheet" href="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.css">
+<script src="../../../lib/jquery-ui-1.13.1.custom/jquery-ui.min.js"></script>
+<!-- //jquery ui -->
+<script src="../../js/adm/design.js"></script>
+<link rel="stylesheet" href="../../css/adm/common.css">
+<script>
+jQuery(function($){
+	$("[data-role='datepicker']" ).datepicker({
+		showOn:"both",
+		buttonText: '',
+		dateFormat: 'yy-mm-dd',
+		changeYear: true,
+		yearRange: "1900:+nn"
+	});
+});
+</script>
+</head>
+<body>
+<div class="adm">
+	<!-- header -->
+	<div id="header">
+		<?php
+		include "inc/header.html";
+		?>
+	</div>
+	<!-- //header -->
+	<!-- side -->
+	<div class="side_nav">
+		<?php
+		include "inc/side_nav.html";
+		?>
+	</div>
+	<!-- //side -->
+	<div id="container">
+		<div class="foreword">
+			<h2>관리자 목록</h2>
+			<div class="path">
+				<span>홈</span>
+				<span>회원</span>
+				<span>관리자</span>
+				<span>메뉴</span>
+			</div>
+		</div>
+		<div id="content">
+			<!-- 콘텐츠 -->
+			<div class="sch_box">
+				내용?
+			</div>
+			<div class="manage_part" style="height:600px;"><!-- 분할하는 부모 영역에 높이는 style 로 임의값 지정 -->
+				<div class="col scroll" style="width:50%;"><!-- 분할하는 영역에 %사이즈는 style 로 임의값 지정 -->
+					<table class="tbl_col" style="width:800px;"><!-- 내부에 테이블은 내용이 길면 width 를 지정해서 스크롤 되도록 -->
+						<colgroup>
+							<col style="width:40px;">
+							<col style="width:60px;">
+							<col style="width:100px;">
+							<col style="width:100px;">
+							<col style="width:80px;">
+							<col>
+							<col>
+							<col style="width:80px;">
+							<col style="width:80px;">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col"><input type="checkbox" title="전체선택"></th>
+								<th scope="col">No</th>
+								<th scope="col">회원 아이디</th>
+								<th scope="col">이름</th>
+								<th scope="col">랜덤<br>선정 상태</th>
+								<th scope="col">양성기관<br>자격심사 상태</th>
+								<th scope="col">운영기관<br>자격심사 상태</th>
+								<th scope="col">신청희망<br>자격등급</th>
+								<th scope="col">관리</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" title="선택"></td>
+								<td>1234</td>
+								<td>OOO</td>
+								<td>홍길동</td>
+								<td>심사전</td>
+								<td>심사전</td>
+								<td>심사전</td>
+								<td>2급</td>
+								<td></td>
+							</tr>
+							<tr class="high"><!-- 테이블 행에 하이라이트 클래스 -->
+								<td><input type="checkbox" title="선택"></td>
+								<td>2</td>
+								<td>OOO</td>
+								<td>홍길동</td>
+								<td>선정</td>
+								<td>미선정<br>경력인정기관 정관 누락</td>
+								<td>선정<br>지리교육과 인정​</td>
+								<td>1급</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" title="선택"></td>
+								<td>3</td>
+								<td>OOO</td>
+								<td>홍길동</td>
+								<td>미선정</td>
+								<td>미선정</td>
+								<td>미선정</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" title="선택"></td>
+								<td>4</td>
+								<td>OOO</td>
+								<td>홍길동</td>
+								<td>예비선정</td>
+								<td>예비선정</td>
+								<td>예비선정</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col" style="width:50%;">
+					<div class="edit" style="height:140px;"><!-- 박스에 높이는 뷰어 영역에 맞추어 style 로 임의값 지정 -->
+						<div class="row_group">
+							<div class="lab">상태</div>
+							<div class="ip sb"><!-- 콘텐츠 좌우 배치시 클래스 sb -->
+								<div class="left">
+									<select name="" id="">
+										<option value="">상태 선택</option>
+									</select>
+								</div>
+								<div class="right">
+									<a href="#" class="ad_btn bk">저장</a>
+								</div>
+							</div>
+						</div>
+						<div class="row_group">
+							<div class="lab">비고</div>
+							<div class="ip">
+								<textarea name="" id="" cols="" rows=""></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="viewer scroll" style="height:450px;"><!-- 뷰어 영역에 높이는 수정영역에 맞추어 style 로 임의값 지정 -->
+						콘텐츠 불러오는 영역?
+					</div>
+				</div>
+			</div>
+			<!-- //콘텐츠 -->
+		</div>
+	</div>
+</div>
+</body>
+</html>
