@@ -115,12 +115,22 @@ jQuery(function($){
 							<input type="text" title="생년월일" data-role="datepicker">
 						</div>
 					</td>
-					<th scope="row">권역</th>
+					<th scope="row">현재 재직기관</th>
+					<!-- 20220420 : 재직기관검색 엑스버튼 추가 (개발마크업 수정) -->
 					<td>
+						<div class="search_area">
+							<input type="text" name="agncyNm" placeholder="재직기관을 선택하여 주세요" title="기관명" readonly="readonly">
+							<input type="hidden" name="agncyCode" placeholder="기관코드을 선택하여 주세요" title="기관코드">
+							<a href="#" class="del" title="삭제"><span class="sr_only">삭제</span></a>
+						</div>
+						<a href="javascript:;" onclick="REQ.openPotalAgncyMain()" class="c_btn bk">찾기</a>
+					</td>
+					<!--<td>
 						<select name="" id="" title="권역">
 							<option value="">선택</option>
 						</select>
-					</td>
+					</td>-->
+					<!-- //20220420 : 재직기관검색 엑스버튼 추가 (개발마크업 수정 -->
 				</tr>
 				<tr>
 					<th scope="row">지역</th>
