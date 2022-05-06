@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7654ad0e-de33-412d-af1f-20d9b8a8769b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/html/adm/00_dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/html/adm/02_description_crs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/html/adm/02_description_mng.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/css/adm/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/adm/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/css/www/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/www/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/html/adm/00_subpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/html/adm/00_subpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/html/www/03_edu_01_app_01_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/html/www/03_edu_01_app_01_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/html/www/06_mypage_02_manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/html/www/06_mypage_02_manage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/html/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/common/html/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +38,8 @@
       <option name="presentableId" value="Default" />
       <updated>1650435537397</updated>
       <workItem from="1650435538487" duration="5921000" />
-      <workItem from="1650442012188" duration="3431000" />
+      <workItem from="1650442012188" duration="5155000" />
+      <workItem from="1651328992671" duration="12912000" />
     </task>
     <servers />
   </component>
@@ -54,13 +47,19 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="500" height="445" key="SwitcherDM" timestamp="1650445002801">
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1651814079705">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1651814079705" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1651405357877">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1651405357877" />
     <state width="500" height="445" key="SwitcherDM/1680.0.1680.1050/0.0.1680.1050@0.0.1680.1050" timestamp="1650445002801" />
-    <state x="539" y="264" width="602" height="580" key="find.popup" timestamp="1650444439288">
+    <state x="539" y="264" width="804" height="676" key="find.popup" timestamp="1651817122291">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="539" y="264" width="804" height="676" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1651817122291" />
     <state x="539" y="264" width="602" height="580" key="find.popup/1680.0.1680.1050/0.0.1680.1050@0.0.1680.1050" timestamp="1650444439288" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1650443674478">
       <screen x="0" y="0" width="1680" height="975" />
