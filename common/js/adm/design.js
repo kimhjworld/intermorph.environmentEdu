@@ -82,6 +82,7 @@ jQuery(function($){
 		var popup = $(this).parents('.ct_dialog');
 		if(popup.length > 0){
 			popup.fadeOut();
+			$('body').css('overflow', 'auto');
 		}
 	});
 });

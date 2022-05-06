@@ -105,7 +105,17 @@ table .high_t {border-top:4px solid var(--ColorGreen) !important;}
 table .high_r {border-right:4px solid var(--ColorGreen) !important;}
 table .high_b {border-bottom:4px solid var(--ColorGreen) !important;}
 table .high_l {border-left:4px solid var(--ColorGreen) !important;}
+.position-relative{position: relative}
 
+/*dev QA */
+.position-relative .c_btn{
+    position: absolute; top:0; right:0
+}
+@media screen and (max-width: 768px) {
+    .position-relative .c_btn{
+        position: static; margin-bottom: 20px;
+    }
+}
 /* layout */
 .ctm {min-width:1400px;}
 .rows {position:relative;width:1400px;margin:0 auto;}
@@ -6210,11 +6220,40 @@ td .no_info {width:100%;padding:20px;}
 .tbl_edu_ct .edu .total span {display:block;}
 
 /* tc_yearly */
-.tc_yearly {overflow-x:auto;}
+.tc_yearly:before{
+    animation-name: fadeOut;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    background: #000 url(../../images/www/icon/swipe-arrow.png) center no-repeat;
+    content:"스크롤하여 볼수 있습니다.";position: absolute;top: 50%;right: 50%;
+    text-align: center;margin-top: -100px;margin-right: -100px;background-size: 100px;
+    opacity: 0;color: #fff;padding: 120px 20px 20px 20px;z-index: 10;box-sizing: border-box;
+    border-radius: 20px;background-position: center 10px;
+}
+.tc_yearly:hover:before{display: none}
+.tc_yearly {overflow-x:auto; position: relative}
 .tc_yearly > table {min-width:860px;}
 .tc_yearly th {font-size:15px;}
 .tc_yearly col:nth-child(1) {width:12% !important;}
 .tc_yearly td:not(.subj) {padding:10px 0;}
+@keyframes fadeOut {
+    0% {
+        opacity: 0.2;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    }
+}
 
 /* contents */
 .p_login .ct {padding:40px;}
@@ -6279,6 +6318,7 @@ td .no_info {width:100%;padding:20px;}
 .cb_bar .p_noti {font-size:16px;}
 .cb_bar .p_noti i {top:0;}
 .cb_bar .p_noti + a {margin-top:10px;}
+
 
 /* edu_li */
 .edu_li .inner {padding:40px 17px 0 17px;}

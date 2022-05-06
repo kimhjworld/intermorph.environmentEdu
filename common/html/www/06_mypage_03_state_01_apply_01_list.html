@@ -56,12 +56,25 @@ jQuery(function($){
 	<div id="content">
 		<!-- 콘텐츠 -->
 		<h3 class="ct_title">교육신청현황</h3>
-		<div class="cb_bar al_c">
-			<p class="p_noti">
-				<span class="c_red"><i class="m_icon_out circle_notifications"></i>[안내]</span> 법 개정 전 (2022.00.00 이전) 교육신청 현황은 이전교육현황에서 확인하여 주세요
-			</p>
-			<a href="06_mypage_03_state_02_past_01_list.html" class="c_btn l_green">이전교육현황</a>
+		<!-- 20220506 markup 변경 -->
+		<div class="position-relative">
+			<div class="cb_bar al_c">
+				<p class="p_noti">
+					<span class="c_red"><i class="m_icon_out circle_notifications"></i>[안내]</span> 법 개정 전 (2022.00.00 이전) 교육신청 현황은 이전교육현황에서 확인하여 주세요
+				</p>
+			</div>
+			<div class="cb_bar">
+				<div class="ct_box">
+					<ul class="radio">
+						<li>수강신청 취소는 교육신청 기간에만 가능합니다.</li>
+						<li>수료여부와 수료증 출력은 아래의 학습완료 탭에서 확인하실 수 있습니다.</li>
+						<li>자격증 발급 신청 및 출력 및 발급 신청은 <a href="javascript:GREQ.loginChekShow('/user/issuAply/selectList.do');" class="high"> 자격증 발급·재발급</a> 메뉴에서 확인하여 주세요.</li>
+					</ul>
+				</div>
+			</div>
+			<a href="06_mypage_03_state_02_past_01_list.html" class="c_btn green xs_wide">이전교육현황</a>
 		</div>
+		<!-- //20220506 markup 변경 -->
 		<ul class="nav_tabs">
 			<li class="on"><a href="#c_01">대기</a></li>
 			<li><a href="#c_02">학습완료</a></li>
