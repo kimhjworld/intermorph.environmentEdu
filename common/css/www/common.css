@@ -270,6 +270,7 @@ table .high_l {border-left:4px solid var(--ColorGreen) !important;}
 .exam_sd .exam {padding:30px 0 0 0;color:#fff;}
 .exam_sd .exam .title {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1;padding-bottom:13px;border-bottom:1px solid #95cdb9;font-size:24px;font-weight:bold;}
 .exam_sd .exam .title a{color:#fff;}
+.exam_sd .exam .title a:hover{color:#022c1c;}
 .exam_sd .exam .info {padding-top:30px;}
 .exam_sd .exam .lab {margin-bottom:5px;font-size:14px;}
 .exam_sd .exam .date {line-height:1;font-size:20px;}
