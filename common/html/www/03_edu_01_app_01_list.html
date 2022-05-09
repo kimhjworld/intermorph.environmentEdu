@@ -56,10 +56,12 @@ jQuery(function($){
 		<!-- 콘텐츠 -->
 		<h3 class="ct_title">1급 사회환경교육지도사</h3>
 		<ul class="nav_tabs">
-			<li class="on"><a href="#c_01">접수 중</a></li>
-			<li><a href="#c_02">준비중</a></li>
-			<li><a href="#">접수마감</a></li>
-			<li><a href="#">전체</a></li>
+			<!-- 20220509 : 카운트 모바일 CSS 추가 -->
+			<li class="on"><a href="#c_01">접수 중<span class="count">(0건)</span></a></li>
+			<li><a href="#c_02">준비중<span class="count">(0건)</span></a></li>
+			<li><a href="#">접수마감<span class="count">(0건)</span></a></li>
+			<li><a href="#">전체<span class="count">(0건)</span></a></li>
+			<!-- //20220509 : 카운트 모바일 CSS 추가 -->
 		</ul>
 		<!-- 20220416 : 검색, 카운트 분리 -->
 		<div class="form_box">

@@ -180,8 +180,8 @@ table .high_l {border-left:4px solid var(--ColorGreen) !important;}
 .main #header.active .global .member a, .main #header.fixed .global .member a, .main #header.active .global .member .user, .main #header.fixed .global .member .user {color:#888;}
 .main #header .global .member .log {background-image:url("../../images/www/icon/ic_gl_log_tr.png");}
 .main #header.active .global .member .log, .main #header.fixed .global .member .log {background-image:url("../../images/www/icon/ic_gl_log.png");}
-.main #header .global .member .join {background-image:url("../../images/www/icon/ic_gl_join_tr.png");}
-.main #header.active .global .member .join, .main #header.fixed .global .member .join {background-image:url("../../images/www/icon/ic_gl_join.png");}
+.main #header .global .member .join {background-image:url("../../images/www/icon/ic_gl_state_tr.png");}
+.main #header.active .global .member .join, .main #header.fixed .global .member .join {background-image:url("../../images/www/icon/ic_gl_state.png");}
 .main #header .nav::before {display:none;}
 .main #header.active .nav::before, .main #header.fixed .nav::before {display:block;}
 .main #gnb > li > a {color:#fff;}
@@ -248,6 +248,7 @@ table .high_l {border-left:4px solid var(--ColorGreen) !important;}
 .main .board .article .more:hover{text-decoration: underline}
 .main .board .article .title {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:16px;font-weight:500;color:#565656;}
 .main .board .article li {border-bottom:1px solid #dfdfdf;}
+.main .board .article a:hover .title{text-decoration: underline}
 .main .board .notice li a {display:block;position:relative;height:82px;padding-right:85px;}
 .main .board .notice .info {height:47px;padding-top:20px;}
 .main .board .notice .writer {height:24px;line-height:22px;padding:0 5px;border:1px solid #bcbcbc;border-radius:2px;font-size:13px;font-weight:500;width:85px;color:var(--ColorGreen);}
@@ -268,6 +269,7 @@ table .high_l {border-left:4px solid var(--ColorGreen) !important;}
 .exam_sd .head .name::before {content:" ";position:absolute;left:0;top:7px;width:40px;height:39px;background:url("../../images/www/icon/card_exam_name.png") no-repeat 0 0;}
 .exam_sd .exam {padding:30px 0 0 0;color:#fff;}
 .exam_sd .exam .title {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:1;padding-bottom:13px;border-bottom:1px solid #95cdb9;font-size:24px;font-weight:bold;}
+.exam_sd .exam .title a{color:#fff;}
 .exam_sd .exam .info {padding-top:30px;}
 .exam_sd .exam .lab {margin-bottom:5px;font-size:14px;}
 .exam_sd .exam .date {line-height:1;font-size:20px;}
@@ -6269,8 +6271,9 @@ td .no_info {width:100%;padding:20px;}
 
 .nav_tabs{display: flex;flex-wrap: nowrap;}
 .nav_tabs > li{flex-grow: 1;display: flex;flex-shrink: 1;display: block}
-.nav_tabs > li > a{font-size: 16px;padding: 0 10px;}
-
+.nav_tabs > li > a{font-size: 16px;padding: 10px 10px;  line-height: 22px;}
+.nav_tabs > li > a .count{display: block}
+    .nav_tabs > li.on > a{height:auto}
 }
 
 @media screen and (max-width:767px) {
