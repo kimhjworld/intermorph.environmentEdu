@@ -209,5 +209,58 @@ jQuery(function($){
 		</div>
 	</div>
 </div>
+<div class="ct_dialog">
+	<div class="tb">
+		<div class="inner">
+			<div class="outer" style="max-width:600px;"><!-- max-width 값 필수 -->
+				<div class="top">
+					<div class="bowl">
+						<p class="title">일괄등록</p>
+						<a href="#" class="p_close"><span class="sr_only">닫기</span></a>
+					</div>
+				</div>
+				<div class="ct">
+					<!-- 콘텐츠 -->
+					<div class="excel-guide">
+						<strong>업로드 '샘플다운로드' 후 양식을 꼭 맞추어서 등록해주세요.</strong>
+						<ul>
+							<li>필수값은  연번,취득연도,자격번호,자격급수,자격취득일,생년월일,양성기관,이름,연락처 입니다.</li>
+							<li>연번은 키 값입니다.</li>
+							<li>생년월일은 0000.00.00 으로 8자리를 숫자 이여야 합니다.</li>
+							<li>엑셀 텍스트로 저장된 파일이여야 합니다. 특히 날짜(생일,시작일,종료일).문자열 숫자. 전화번호 등
+								<br>전화번호는 000-0000-00000 으로  구분자는 -만 있어야 합니다.</li>
+							<li>날짜 형식은 엑셀에서 사용자 지정에서    yyyy-mm-dd로 변경하시기 바랍니다.</li>
+						</ul>
+					</div>
+					<table class="tbl_row">
+						<caption> 상세정보</caption>
+						<colgroup>
+							<col style="width:120px;">
+							<col>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">일괄파일<span class="c_red">*</span></th>
+							<td>
+								<input type="hidden" name="atchFileId" value="">
+								<input type="file" id="excelfile" value="excelfile" name="FileId" title="파일찾기" accept=".xls,.xlsx">
+							</td>
+						</tr>
+						</tbody>
+					</table>
+
+					<div class="b_box">
+						<a href="#" class="ad_btn green">샘플다운로드</a>
+						<a href="#" class="ad_btn green">저장</a>
+						<a href="#" class="ad_btn bk">삭제</a>
+					</div>
+					<div class="b_box">
+					<!-- //콘텐츠 -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>
