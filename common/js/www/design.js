@@ -101,6 +101,7 @@ jQuery(function($){
 	$.fn.main_slide = function(){
 		return this.each(function(){
 			var total = $(this).find('.slick-slide').length;
+			var total_slide_item = $(this).find('.slide_item').length;
 			if (total < 2) {
 				$(this).addClass('one');
 			}
@@ -112,7 +113,7 @@ jQuery(function($){
 					return '<button class="tab">' +
 								'<div class="line_fill"><span></span></div>' +
 								'<div class="indicator">' +
-									'<span class="num">0' + (i+1) + '</span>' +
+									'<span class="num">' + (i+1) +'/'+total_slide_item+'</span>' +
 									' <span class="lab">' + $(slider.$slides[i]).find('.slide_item').attr('data-dot-title') +'</span>' +
 								'</div>' +
 							'</button>';
