@@ -25,10 +25,7 @@ jQuery(function($){
 	});
 });
 </script>
-<style>
-/* 바로가기 메뉴 여백 */
-.main .sc_link {padding:40px 165px 50px 0;}
-</style>
+
 </head>
 <body>
 <div id="skip">
@@ -304,25 +301,33 @@ jQuery(function($){
 		<div class="rows">
 			<ul class="sc_link">
 				<li class="history">
-					<a href="#">
-						<span class="lab">이력관리</span>
-						<p>이력관리 서비스를 <br>경험해 보세요.</p>
-					</a>
-				</li>
-				<li class="reedu">
-					<a href="#">
-						<span class="lab">보수교육 신청</span>
-						<p>보수교육을 신청하시고<br>확인하세요.</p>
-					</a>
+					<div class="hover">
+						<span class="lab">교육신청</span>
+						<p>환경교육사 교육을<br/>신청하세요.</p>
+						<p class="quick_link">
+							<a href="#" class="c_btn d_green em">3급</a>
+							<a href="#" class="c_btn d_green em">2급</a>
+						</p>
+					</div>
 				</li>
 				<li class="faq">
-					<a href="#">
-						<span class="lab">FAQ</span>
-						<p>궁금하신 사항이 있으시면<br>FAQ에서 찾아보세요.</p>
+					<div class="hover">
+						<span class="lab">평가신청</span>
+						<p>환경교육사 필기<br>평가를 신청하세요.</p>
+						<p class="quick_link">
+							<a href="#" class="c_btn d_green em">3급</a>
+							<a href="#" class="c_btn d_green em">2급</a>
+						</p>
+					</div>
+				</li>
+				<li class="reedu">
+					<a href="#"  class="hover">
+						<span class="lab">결과조회</span>
+						<p>필기평가 결과를<br>조회하세요.</p>
 					</a>
 				</li>
 				<li class="my">
-					<a href="#">
+					<a href="#"  class="hover">
 						<span class="lab">마이페이지</span>
 						<p>나의 교육신청내역과<br>여러가지 정보를 확인하세요.</p>
 					</a>

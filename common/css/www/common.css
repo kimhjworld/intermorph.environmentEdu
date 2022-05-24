@@ -233,15 +233,21 @@ table .high_l {border-left:4px solid var(--ColorGreen) !important;}
 .main .sc_link::before {content:" ";position:absolute;right:0;bottom:57px;width:173px;height:232px;background:url("../../images/www/bg/sc_link_deco.png") no-repeat 0 0;}
 .main .sc_link li {display:flex;align-items:center;width:25%;height:110px;background-repeat:no-repeat;background-position:30px 50%;}
 .main .sc_link li + li {border-left:1px solid #d6d6d6;}
-.main .sc_link a {width:100%;padding-left:115px;}
-.main .sc_link a:hover span{color:var(--ColorDarkGreen);}
-.main .sc_link a:hover p{color:var(--HoverBk);}
+.main .sc_link .hover {width:100%;padding-left:115px;}
+.main .sc_link .hover:hover span{color:var(--ColorDarkGreen);}
+.main .sc_link .hover:hover p{color:var(--HoverBk);}
 .main .sc_link .lab {font-size:22px;font-weight:700;letter-spacing:-0.5px;color:#222;}
 .main .sc_link p {word-break:keep-all;line-height:1.3;margin-top:7px;font-size:16px;letter-spacing:-0.2px;color:#898989;}
 .main .sc_link .history {background-position-x:40px;background-image:url("../../images/www/bg/sc_link_history.png");}
 .main .sc_link .reedu {background-image:url("../../images/www/bg/sc_link_reedu.png");}
 .main .sc_link .faq {background-position-x:35px;background-image:url("../../images/www/bg/sc_link_faq.png");}
 .main .sc_link .my {background-image:url("../../images/www/bg/sc_link_my.png");}
+.main .sc_link .quick_link{display: none}
+.main .sc_link .quick_link a{min-width: 80px; text-decoration: none; margin-top: 2px;}
+.main .sc_link div.hover:hover .quick_link{display: block;}
+.main .sc_link div.hover:hover .quick_link a:hover{text-decoration: underline;}
+.main .sc_link div.hover:hover p{display: none;}
+
 .main .section {padding:65px 0;}
 .main .section.course {background-color:#f3f3f3;}
 .main .cs_head {display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:25px;padding-right:100px;}
@@ -6096,7 +6102,7 @@ td .no_info {width:100%;padding:20px;}
 .main .sc_link::before {display:none;}
 .main .sc_link li {text-align:center;align-items:baseline;height:auto;background-position:50% 20px;}
 .main .sc_link .faq, .main .sc_link .history {background-position:50% 20px;}
-.main .sc_link a {padding:90px 10px 10px 10px;}
+.main .sc_link .hover {padding:90px 10px 10px 10px;}
 .edu_li {margin:-10px -10px 0 -10px;}
 .edu_li:not(.sd) > div {width:50%;}
 .edu_li .inner {box-shadow:4px 4px 7px 0 rgba(0, 0, 0, 0.1);}
@@ -6318,7 +6324,11 @@ td .no_info {width:100%;padding:20px;}
 .main .sc_link li {width:50%;}
 .main .sc_link li:nth-child(3) {border-left:0;}
 .main .sc_link li:nth-child(3), .main .sc_link li:nth-child(4) {border-top:1px solid #d6d6d6;}
-.main .sc_link a {padding:90px 10px 30px 10px;}
+.main .sc_link .hover {padding:90px 10px 30px 10px;}
+.main .sc_link .quick_link a{min-width: 60px;}
+.main .sc_link div.hover p{display: none}
+.main .sc_link div.hover .quick_link{display: block}
+
 
 /* dash */
 .tbl_state .data {padding:30px;}
