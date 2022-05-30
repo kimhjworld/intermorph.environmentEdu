@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7654ad0e-de33-412d-af1f-20d9b8a8769b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/css/www/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/www/common.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/html/adm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -40,6 +41,7 @@
       <workItem from="1650435538487" duration="5921000" />
       <workItem from="1650442012188" duration="5155000" />
       <workItem from="1651328992671" duration="12912000" />
+      <workItem from="1653894293898" duration="354000" />
     </task>
     <servers />
   </component>

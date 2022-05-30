@@ -6047,7 +6047,8 @@ td .no_info {text-align:center;}
 .role_pop {position:fixed;right:15px;top:85px;}
 }
 
-@media screen and (max-width:768px) { /* mobile */
+/*20220530 - pad size에서도 mobile 로  768 => 1024 로 변경  */
+@media screen and (max-width:1024px) { /* mobile */
 /* common */
 .hd_mo {display:none;}
 .vs_mo {display:block;}
