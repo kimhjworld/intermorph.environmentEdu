@@ -6048,7 +6048,7 @@ td .no_info {text-align:center;}
 }
 
 /*20220530 - pad size에서도 mobile 로  768 => 1200 로 변경  */
-@media screen and (max-width:1200px) { /* mobile */
+@media screen and (max-width:1280px) { /* mobile */
 /* common */
 .hd_mo {display:none;}
 .vs_mo {display:block;}
