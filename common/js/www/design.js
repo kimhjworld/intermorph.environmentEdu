@@ -162,7 +162,7 @@ jQuery(function($){
 				appendArrows:$(this).parents('.edu_sd').find('.arrows'),
 				responsive: [
 					{
-						breakpoint: 1201,
+						breakpoint: 1401,
 						settings: {
 							slidesToShow: 2,
 							slidesToScroll: 2
